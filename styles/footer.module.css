@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  overflow-x: hidden;
+  /* gap: 10px; */
+  width: 100%;
+  background-color: #575e21;
+}
+.footer > div {
+  animation: advertising infinite linear 14s;
+}
+@keyframes advertising {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
