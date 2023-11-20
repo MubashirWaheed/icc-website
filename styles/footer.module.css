@@ -6,7 +6,7 @@
   background-color: #575e21;
 }
 .footer > div {
-  animation: advertising infinite linear 14s;
+  animation: advertising infinite linear 20s;
 }
 @keyframes advertising {
   0% {
