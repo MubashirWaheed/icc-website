@@ -23,11 +23,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         {undercontruction == true ? (
-          <div className="flex items-center justify-center h-full">
-            <h1 className="text-[28px] mt-[10px] font-medium">
-              Website under construction
-            </h1>
-          </div>
+          <>
+            <div className="flex items-center justify-center h-full">
+              <h1 className="text-[28px] mt-[10px] font-medium">
+                Website under construction
+              </h1>
+            </div>
+            <Analytics />
+          </>
         ) : (
           <div className="bg-[#232323] flex items-center justify-center">
             <nav className=" px-3 max-w-[1180px] flex items-center justify-between w-full h-[70px] sm:h-[85px]">
