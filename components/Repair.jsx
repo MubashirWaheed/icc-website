@@ -211,8 +211,11 @@ const Repair = () => {
           </div>
 
           {/* CAR  */}
-          <div className="absolute top-[70px] left-[230px]">
-            <div ref={carRef} className="relative sm:w-[60px] sm:h-[60px]">
+          <div className="absolute top-[70px] left-[230px] lg:top-[30px] lg:left-[350px]">
+            <div
+              ref={carRef}
+              className="relative sm:w-[60px] sm:h-[60px] lg:w-[120px] lg:h-[120px]"
+            >
               <Image src="/images/car.svg" alt="car" fill />
             </div>
           </div>

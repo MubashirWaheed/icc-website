@@ -7,8 +7,8 @@ const Hero = () => {
       <div className="relative">
         <Image
           src="/images/hero.png"
-          width="1600"
-          height="800"
+          width="2000"
+          height="900"
           alt="hero section"
         />
         <div className="absolute bg-black bg-opacity-40  inset-0"></div>

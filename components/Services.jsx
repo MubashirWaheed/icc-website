@@ -2,6 +2,69 @@
 import Image from "next/image";
 import { useState } from "react";
 
+const servicesRow1 = [
+  {
+    serviceName: "Minor/major service",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    serviceName: "Tunning programing",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    serviceName: "Suspension service",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+];
+const servicesRow2 = [
+  {
+    serviceName: "A/C Service",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    serviceName: "Body Shop",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+  },
+  {
+    serviceName: "Body Kits",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+];
+
+const servicesRow3 = [
+  {
+    serviceName: "Mechanical jobs",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    serviceName: "Electrical jobs",
+    description:
+      "Lorem ipsum dolor sit amet, sed do consectetur adipiscing elit,  do  incididunt ut labore dolore magna.",
+  },
+  {
+    serviceName: "Diagnostic",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+];
+
+const generateDynamicStyles = (index) => {
+  if (index === 1) {
+    return `
+      before:content-[''] before:h-[120px] before:bg-primaryGreen before:w-[1px] lg:before:w-[5px]
+      after:content-[''] after:h-[120px] after:bg-primaryGreen after:w-[1px] lg:after:w-[5px]
+    `;
+  }
+  return "";
+};
+
 const Services = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -9,182 +72,88 @@ const Services = () => {
   const [comment, setComment] = useState("");
 
   return (
-    <div className="relative md:pt-[20px] " id="services">
+    <div className="z-10 relative md:pt-[20px] " id="services">
       <h2 className="font-bold py-[50px] text-center text-white  text-[32px] leading-3 md:text-[55px]">
         Our services include:
       </h2>
       <div className="max-w-[1180px] flex flex-col items-center justify-between gap-6 ">
         {/* ROW */}
-        <div className="mx-[70px] flex flex-col gap-4 sm:flex-row ">
-          <div className="flex flex-col items-center flex-1 gap-2 lg:flex-row sm:gap-4">
-            <div className="bg-[#6E7D00] rounded-full p-[12px]">
-              <div className="relative w-[28px] h-[28px] sm:w-[50px] sm:h-[50px]">
-                <Image src="/images/tools.svg" alt="services" fill />
+        <div className="  flex flex-col gap-4 sm:flex-row ">
+          {servicesRow1.map((item, index) => (
+            <div
+              key={index}
+              className={`
+              ${generateDynamicStyles(index)}
+              flex flex-row items-center flex-1 gap-2 lg:flex-row sm:gap-4`}
+            >
+              <div className="bg-[#6E7D00] rounded-full p-[12px]">
+                <div className="relative w-[28px] h-[28px] sm:w-[50px] sm:h-[50px] md:w-[38px] md:h-[38px] ">
+                  <Image src="/images/tools.svg" alt="services" fill />
+                </div>
+              </div>
+              <div className="text-center text-white sm:text-left ">
+                <span className="text-[22px] md:text-[20px] lg:text-[28px] cursor-pointer md:leading-3 lg:leading-6 hover:underline">
+                  {item.serviceName}
+                </span>
+                <p className="text-[13px] md:text-[14px] md:leading-[18px] lg:text-[16px] lg:leading-5  font-light">
+                  {item.description}
+                </p>
               </div>
             </div>
-            <div className="text-center text-white sm:text-left ">
-              <p className="text-[22px] md:text-[28px]">Body shope</p>
-              <p className="text-[13px] md:text-[16px] leading-4 md:leading-5 font-light">
-                perfect Neque porro quisquam est qui dolorem ipsum quia dolor
-                sit amet, consectetur, adipisci velit.
-              </p>
-            </div>
-          </div>
-
-          <div className="pb-[20px] px-[36px] flex flex-1 flex-col lg:flex-row items-center gap-4 sm:border-x-2 border-y-[1px] sm:border-y-0 border-[#6E7D00] ">
-            <div className="bg-[#6E7D00] rounded-full p-[12px]">
-              <div className="relative w-[28px] h-[28px] sm:w-[50px] sm:h-[50px]">
-                <Image
-                  src="/images/settings.svg"
-                  width="50"
-                  height="50"
-                  alt="services"
-                />
-              </div>
-            </div>
-            <div className="text-center text-white sm:text-left">
-              <p className="text-[22px] md:text-[28px]">Body shope</p>
-              <p className="text-[13px] md:text-[16px] leading-4 md:leading-5 font-light">
-                Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci velit.
-              </p>
-            </div>
-          </div>
-
-          <div className="pb-[20px] flex flex-1 items-center gap-4 flex-col lg:flex-row border-b-[1px] sm:border-b-0 border-[#6E7D00]">
-            <div className="bg-[#6E7D00] rounded-full p-[12px]">
-              <div className="relative w-[28px] h-[28px] sm:w-[50px] sm:h-[50px]">
-                <Image
-                  src="/images/settings.svg"
-                  width="50"
-                  height="50"
-                  alt="services"
-                />
-              </div>
-            </div>
-            <div className="text-center text-white sm:text-left">
-              <p className="text-[22px] md:text-[28px]">Body shope</p>
-              <p className="text-[13px] md:text-[16px] leading-4 md:leading-5 font-light">
-                LAST Neque porro quisquam est qui dolorem ipsum quia dolor sit
-                amet, consectetur, adipisci velit.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* ROW */}
-        <div className="mx-[70px] flex flex-col gap-4 sm:flex-row ">
-          <div className="flex flex-col items-center flex-1 gap-2 lg:flex-row sm:gap-4">
-            <div className="bg-[#6E7D00] rounded-full p-[12px]">
-              <div className="relative w-[28px] h-[28px] sm:w-[50px] sm:h-[50px]">
-                <Image src="/images/tools.svg" alt="services" fill />
+        <div className=" flex flex-col gap-4 sm:flex-row ">
+          {servicesRow2.map((item, index) => {
+            return (
+              <div
+                className={` 
+                ${generateDynamicStyles(index)}
+              flex flex-row items-center flex-1 gap-2 lg:flex-row sm:gap-4`}
+              >
+                <div className="bg-[#6E7D00] rounded-full p-[12px]">
+                  <div className="relative w-[28px] h-[28px] sm:w-[50px] sm:h-[50px] md:w-[38px] md:h-[38px]">
+                    <Image src="/images/tools.svg" alt="services" fill />
+                  </div>
+                </div>
+                <div className="text-center text-white sm:text-left ">
+                  <p className="text-[22px] md:text-[20px] lg:text-[28px] cursor-pointer hover:underline">
+                    {item.serviceName}
+                  </p>
+                  <p className="text-[13px] md:text-[14px] md:leading-[18px] lg:text-[16px] lg:leading-5  font-light">
+                    {item.description}
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="text-center text-white sm:text-left ">
-              <p className="text-[22px] md:text-[28px]">Body shope</p>
-              <p className="text-[13px] md:text-[16px] leading-4 md:leading-5 font-light">
-                Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci velit.
-              </p>
-            </div>
-          </div>
-
-          <div className="pb-[20px] px-[36px] flex flex-1 flex-col lg:flex-row items-center gap-4 sm:border-x-2 border-y-[1px] sm:border-y-0 border-[#6E7D00] ">
-            <div className="bg-[#6E7D00] rounded-full p-[12px]">
-              <div className="relative w-[28px] h-[28px] sm:w-[50px] sm:h-[50px]">
-                <Image
-                  src="/images/settings.svg"
-                  width="50"
-                  height="50"
-                  alt="services"
-                />
-              </div>
-            </div>
-            <div className="text-center text-white sm:text-left">
-              <p className="text-[22px] md:text-[28px]">Body shope</p>
-              <p className="text-[13px] md:text-[16px] leading-4 md:leading-5 font-light">
-                Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci velit.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center flex-1 gap-4 lg:flex-row">
-            <div className="bg-[#6E7D00] rounded-full p-[12px]">
-              <div className="relative w-[28px] h-[28px] sm:w-[50px] sm:h-[50px]">
-                <Image
-                  src="/images/settings.svg"
-                  width="50"
-                  height="50"
-                  alt="services"
-                />
-              </div>
-            </div>
-            <div className="text-center text-white sm:text-left">
-              <p className="text-[22px] md:text-[28px]">Body shope</p>
-              <p className="text-[13px] md:text-[16px] leading-4 md:leading-5 font-light">
-                Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci velit.
-              </p>
-            </div>
-          </div>
+            );
+          })}
         </div>
         {/* ROW */}
-        <div className="mx-[70px] flex flex-col gap-4 sm:flex-row ">
-          <div className="flex flex-col items-center flex-1 gap-2 lg:flex-row sm:gap-4">
-            <div className="bg-[#6E7D00] rounded-full p-[12px]">
-              <div className="relative w-[28px] h-[28px] sm:w-[50px] sm:h-[50px]">
-                <Image src="/images/tools.svg" alt="services" fill />
+        <div className=" flex flex-col gap-4 sm:flex-row ">
+          {servicesRow3.map((item, index) => {
+            return (
+              <div
+                className={`${generateDynamicStyles(
+                  index
+                )}flex flex-row items-center flex-1 gap-2 lg:flex-row sm:gap-4`}
+              >
+                <div className="bg-[#6E7D00] rounded-full p-[12px]">
+                  <div className="relative w-[28px] h-[28px] sm:w-[50px] sm:h-[50px] md:w-[38px] md:h-[38px]">
+                    <Image src="/images/tools.svg" alt="services" fill />
+                  </div>
+                </div>
+                <div className="text-center text-white sm:text-left ">
+                  <p className="text-[22px] md:text-[20px] lg:text-[28px] cursor-pointer hover:underline">
+                    {item.serviceName}
+                  </p>
+                  <p className="text-[13px] md:text-[14px] md:leading-[18px] lg:text-[16px] lg:leading-5  font-light">
+                    {item.description}
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="text-center text-white sm:text-left ">
-              <p className="text-[22px] md:text-[28px]">Body shope</p>
-              <p className="text-[13px] md:text-[16px] leading-4 md:leading-5 font-light">
-                Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci velit.
-              </p>
-            </div>
-          </div>
-
-          <div className="pb-[20px] px-[36px] flex flex-1 flex-col lg:flex-row items-center gap-4 sm:border-x-2 border-y-[1px] sm:border-y-0 border-[#6E7D00] ">
-            <div className="bg-[#6E7D00] rounded-full p-[12px]">
-              <div className="relative w-[28px] h-[28px] sm:w-[50px] sm:h-[50px]">
-                <Image
-                  src="/images/settings.svg"
-                  width="50"
-                  height="50"
-                  alt="services"
-                />
-              </div>
-            </div>
-            <div className="text-center text-white sm:text-left">
-              <p className="text-[22px] md:text-[28px]">Body shope</p>
-              <p className="text-[13px] md:text-[16px] leading-4 md:leading-5 font-light">
-                Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci velit.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center flex-1 gap-4 lg:flex-row">
-            <div className="bg-[#6E7D00] rounded-full p-[12px]">
-              <div className="relative w-[28px] h-[28px] sm:w-[50px] sm:h-[50px]">
-                <Image
-                  src="/images/settings.svg"
-                  width="50"
-                  height="50"
-                  alt="services"
-                />
-              </div>
-            </div>
-            <div className="text-center text-white sm:text-left">
-              <p className="text-[22px] md:text-[28px]">Body shope</p>
-              <p className="text-[13px] md:text-[16px] leading-4 md:leading-5 font-light">
-                Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci velit.
-              </p>
-            </div>
-          </div>
+            );
+          })}
         </div>
 
         {/* CONTACT POP UP*/}

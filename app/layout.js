@@ -18,26 +18,34 @@ const navigationData = [
 ];
 
 export default function RootLayout({ children }) {
+  const undercontruction = true;
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="bg-[#232323] flex items-center justify-center">
-          <nav className=" px-3 max-w-[1180px] flex items-center justify-between w-full h-[70px] sm:h-[85px]">
-            <div className="relative w-[100px] h-[70px] sm:w-[150px] sm:h-[110px]">
-              <Image
-                className="block cursor-pointer"
-                src="/images/icc-logo.svg"
-                alt="logo"
-                fill
-                priority={true}
-              />
-            </div>
-            <div className="flex items-center gap-1 ">
-              <ul className="pt-[30px] pr-[12px] flex gap-[10px] sm:gap-7 text-white">
-                {navigationData.map((item) => (
-                  <li className="text-center" key={item.id}>
-                    <a
-                      className={`
+        {undercontruction == true ? (
+          <div className="flex items-center justify-center h-full">
+            <h1 className="text-[28px] mt-[10px] font-medium">
+              Website under construction
+            </h1>
+          </div>
+        ) : (
+          <div className="bg-[#232323] flex items-center justify-center">
+            <nav className=" px-3 max-w-[1180px] flex items-center justify-between w-full h-[70px] sm:h-[85px]">
+              <div className="relative w-[100px] h-[70px] sm:w-[150px] sm:h-[110px]">
+                <Image
+                  className="block cursor-pointer"
+                  src="/images/icc-logo.svg"
+                  alt="logo"
+                  fill
+                  priority={true}
+                />
+              </div>
+              <div className="flex items-center gap-1 ">
+                <ul className="pt-[30px] pr-[12px] flex gap-[10px] sm:gap-7 text-white">
+                  {navigationData.map((item) => (
+                    <li className="text-center" key={item.id}>
+                      <a
+                        className={`
                       ${item.label == "Home" && "after:w-[100%] "}     
                       after:duration-300                 
                       after:content-[""] 
@@ -58,28 +66,29 @@ export default function RootLayout({ children }) {
                       sm:font-bold 
                       cursor-pointer
                       `}
-                      href={item.url}
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+                        href={item.url}
+                      >
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
 
-              <Link
-                target="_blank"
-                href="https://www.instagram.com/icc_garage_uae/"
-                className="hover:scale-105 transition-all relative w-[24px] h-[24px] sm:w-[34px] sm:h-[34px] cursor-pointer"
-              >
-                <Image
-                  src="/images/whatsapp-transparent.svg"
-                  alt="instagram logo"
-                  fill
-                />
-              </Link>
-            </div>
-          </nav>
-        </div>
+                <Link
+                  target="_blank"
+                  href="https://www.instagram.com/icc_garage_uae/"
+                  className="hover:scale-105 transition-all relative w-[24px] h-[24px] sm:w-[34px] sm:h-[34px] cursor-pointer"
+                >
+                  <Image
+                    src="/images/whatsapp-transparent.svg"
+                    alt="instagram logo"
+                    fill
+                  />
+                </Link>
+              </div>
+            </nav>
+          </div>
+        )}
         {children}
       </body>
     </html>
