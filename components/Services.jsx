@@ -108,6 +108,7 @@ const Services = () => {
           {servicesRow2.map((item, index) => {
             return (
               <div
+                key={index}
                 className={` 
                 ${generateDynamicStyles(index)}
               flex flex-row items-center flex-1 gap-2 lg:flex-row sm:gap-4`}
@@ -134,6 +135,7 @@ const Services = () => {
           {servicesRow3.map((item, index) => {
             return (
               <div
+                key={index}
                 className={`${generateDynamicStyles(
                   index
                 )}flex flex-row items-center flex-1 gap-2 lg:flex-row sm:gap-4`}
