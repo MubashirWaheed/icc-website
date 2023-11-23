@@ -6,20 +6,6 @@ html,
 body,
 :root {
   height: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   scroll-behavior: smooth;
-}
-
-.logoContainer {
-  position: relative;
-  overflow: hidden;
-  width: 158.57px;
-  height: 30.93px;
-}
-
-@media (max-width: 500px) and (orientation: portrait) {
-  .logoContainer {
-    width: 79.285px;
-    height: 15.465px;
-  }
 }

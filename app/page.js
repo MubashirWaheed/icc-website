@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 
 export default function Home() {
-  const undercontruction = true;
+  const undercontruction = false;
   return (
     <div>
       {undercontruction === true ? (
@@ -25,8 +25,8 @@ export default function Home() {
                 <Image src="/images/pattern2.png" fill alt="pattern" />
               </div>
             </div>
-            <div className="z-0 absolute sm:top-[1300px] sm:left-0 md:top-[1450px] lg:top-[1250px] lg:left-0 xl:top-[1200px] 2xl:top-[1300px]  ">
-              <div className="relative sm:w-[400px] sm:h-[140px] lg:w-[600px] lg:h-[200px] 2xl:h-[240px]">
+            <div className="z-0 absolute sm:top-[950px] sm:left-0 md:top-[1050px] lg:top-[1130px] lg:left-0 xl:top-[1200px] 2xl:top-[1280px]  ">
+              <div className="relative sm:w-[400px] sm:h-[140px] lg:w-[600px] lg:h-[200px] 2xl:w-[700px] 2xl:h-[260px] ">
                 <Image src="/images/pattern3.png" fill alt="pattern3" />
               </div>
             </div>

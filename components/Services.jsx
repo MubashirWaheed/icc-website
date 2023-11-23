@@ -6,34 +6,31 @@ const servicesRow1 = [
   {
     serviceName: "Minor/major service",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Fluids and filters replacement, engine service for keeping your car like new",
   },
   {
     serviceName: "Tunning programing",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "Enhance power and torque - unleash the beast",
   },
   {
     serviceName: "Suspension service",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "Inspect, repair, align—for smooth, safe rides",
   },
 ];
 const servicesRow2 = [
   {
     serviceName: "A/C Service",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "Inspect, maintain, repair for cool driving",
   },
   {
     serviceName: "Body Shop",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+      "Collision repair, denting, painting, refinishing and polishing ",
   },
   {
     serviceName: "Body Kits",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Installation, aligment, painting and polishing to make an exclusive vehicle ",
   },
 ];
 
@@ -41,17 +38,17 @@ const servicesRow3 = [
   {
     serviceName: "Mechanical jobs",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Engine, gear, transfer case, brakes, steering and etc. diagnostic, maintenance and repair",
   },
   {
     serviceName: "Electrical jobs",
     description:
-      "Lorem ipsum dolor sit amet, sed do consectetur adipiscing elit,  do  incididunt ut labore dolore magna.",
+      "Electrical diagnostics, repairs, and maintenance for any electronic components",
   },
   {
     serviceName: "Diagnostic",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Identifying and analyzing vehicle issues using most advanced diagnostic tools and methods",
   },
 ];
 
@@ -76,26 +73,27 @@ const Services = () => {
       <h2 className="font-bold py-[50px] text-center text-white  text-[32px] leading-3 md:text-[55px]">
         Our services include:
       </h2>
-      <div className="max-w-[1180px] flex flex-col items-center justify-between gap-6 ">
+      <div className="px-[10px] max-w-[1180px] flex flex-col items-center justify-between gap-6 ">
         {/* ROW */}
-        <div className="  flex flex-col gap-4 sm:flex-row ">
+        <div className="flex flex-col gap-4 sm:flex-row ">
           {servicesRow1.map((item, index) => (
             <div
               key={index}
               className={`
-              ${generateDynamicStyles(index)}
-              flex flex-row items-center flex-1 gap-2 lg:flex-row sm:gap-4`}
+              flex flex-row items-center flex-1 gap-2 lg:flex-row sm:gap-2 md:gap-4 ${generateDynamicStyles(
+                index
+              )}`}
             >
               <div className="bg-[#6E7D00] rounded-full p-[12px]">
-                <div className="relative w-[28px] h-[28px] sm:w-[50px] sm:h-[50px] md:w-[38px] md:h-[38px] ">
+                <div className="relative w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] md:w-[38px] md:h-[38px]">
                   <Image src="/images/tools.svg" alt="services" fill />
                 </div>
               </div>
               <div className="text-center text-white sm:text-left ">
-                <span className="text-[22px] md:text-[20px] lg:text-[28px] cursor-pointer md:leading-3 lg:leading-6 hover:underline">
+                <span className="sm:text-[18px] md:text-[20px] lg:text-[28px] cursor-pointer md:leading-3 lg:leading-6 hover:underline">
                   {item.serviceName}
                 </span>
-                <p className="text-[13px] md:text-[14px] md:leading-[18px] lg:text-[16px] lg:leading-5  font-light">
+                <p className="sm:text-[12px] md:text-[14px] md:leading-[18px] lg:text-[16px] lg:leading-5  font-light">
                   {item.description}
                 </p>
               </div>
@@ -111,18 +109,18 @@ const Services = () => {
                 key={index}
                 className={` 
                 ${generateDynamicStyles(index)}
-              flex flex-row items-center flex-1 gap-2 lg:flex-row sm:gap-4`}
+              flex flex-row items-center flex-1 gap-2 lg:flex-row sm:gap-2 md:gap-4`}
               >
                 <div className="bg-[#6E7D00] rounded-full p-[12px]">
-                  <div className="relative w-[28px] h-[28px] sm:w-[50px] sm:h-[50px] md:w-[38px] md:h-[38px]">
+                  <div className="relative w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] md:w-[38px] md:h-[38px]">
                     <Image src="/images/tools.svg" alt="services" fill />
                   </div>
                 </div>
                 <div className="text-center text-white sm:text-left ">
-                  <p className="text-[22px] md:text-[20px] lg:text-[28px] cursor-pointer hover:underline">
+                  <p className="sm:text-[18px] md:text-[20px] lg:text-[28px] cursor-pointer hover:underline">
                     {item.serviceName}
                   </p>
-                  <p className="text-[13px] md:text-[14px] md:leading-[18px] lg:text-[16px] lg:leading-5  font-light">
+                  <p className="sm:text-[12px] md:text-[14px] md:leading-[18px] lg:text-[16px] lg:leading-5  font-light">
                     {item.description}
                   </p>
                 </div>
@@ -138,18 +136,18 @@ const Services = () => {
                 key={index}
                 className={`${generateDynamicStyles(
                   index
-                )}flex flex-row items-center flex-1 gap-2 lg:flex-row sm:gap-4`}
+                )}flex flex-row items-center flex-1 gap-2 lg:flex-row sm:gap-2 md:gap-4`}
               >
                 <div className="bg-[#6E7D00] rounded-full p-[12px]">
-                  <div className="relative w-[28px] h-[28px] sm:w-[50px] sm:h-[50px] md:w-[38px] md:h-[38px]">
+                  <div className="relative w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] md:w-[38px] md:h-[38px]">
                     <Image src="/images/tools.svg" alt="services" fill />
                   </div>
                 </div>
                 <div className="text-center text-white sm:text-left ">
-                  <p className="text-[22px] md:text-[20px] lg:text-[28px] cursor-pointer hover:underline">
+                  <p className="text-[22px] sm:text-[18px] sm: md:text-[20px] md:leading-5 lg:text-[28px] cursor-pointer hover:underline">
                     {item.serviceName}
                   </p>
-                  <p className="text-[13px] md:text-[14px] md:leading-[18px] lg:text-[16px] lg:leading-5  font-light">
+                  <p className="sm:text-[12px] md:text-[14px] md:leading-[18px] md:mt-[5px] lg:mt-[0px]  lg:text-[16px] lg:leading-5  font-light">
                     {item.description}
                   </p>
                 </div>
@@ -206,7 +204,11 @@ const Services = () => {
             </form>
             <div className="flex w-full items-end justify-end   pr-[20px]">
               <div className=" relative sm:w-[35px] sm:h-[35px] cursor-pointer bg-accentGreen rounded-full p-[10px]">
-                <Image src="/images/whatsapp-transparent.svg" fill />
+                <Image
+                  src="/images/whatsapp-transparent.svg"
+                  fill
+                  alt="whatsapp logo"
+                />
               </div>
             </div>
           </div>

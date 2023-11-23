@@ -18,7 +18,7 @@ const navigationData = [
 ];
 
 export default function RootLayout({ children }) {
-  const undercontruction = true;
+  const undercontruction = false;
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
           <>
             <div className="flex items-center justify-center h-full">
               <h1 className="text-[28px] mt-[10px] font-medium">
-                Website under construction
+                Website under development
               </h1>
             </div>
             <Analytics />
