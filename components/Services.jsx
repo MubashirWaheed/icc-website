@@ -55,8 +55,8 @@ const servicesRow3 = [
 const generateDynamicStyles = (index) => {
   if (index === 1) {
     return `
-      before:content-[''] before:h-[120px] before:bg-primaryGreen before:w-[1px] lg:before:w-[5px]
-      after:content-[''] after:h-[120px] after:bg-primaryGreen after:w-[1px] lg:after:w-[5px]
+      before:content-[''] before:h-[120px] before:bg-primaryGreen before:w-[1px] lg:before:w-[3px]
+      after:content-[''] after:h-[120px] after:bg-primaryGreen after:w-[1px] lg:after:w-[3px]
     `;
   }
   return "";
@@ -69,8 +69,8 @@ const Services = () => {
   const [comment, setComment] = useState("");
 
   return (
-    <div className="z-10 relative md:pt-[20px] " id="services">
-      <h2 className="font-bold py-[50px] text-center text-white  text-[32px] leading-3 md:text-[55px]">
+    <div className="z-10 relative  lg:pt-[20px] " id="services">
+      <h2 className="font-bold sm:py-[26px] md:py-[40px] lg:py-[50px] text-center text-white  text-[32px] leading-3 md:text-[55px]">
         Our services include:
       </h2>
       <div className="px-[10px] max-w-[1180px] flex flex-col items-center justify-between gap-6 ">
@@ -158,7 +158,7 @@ const Services = () => {
 
         {/* CONTACT POP UP*/}
         <div className=" z-50 relative group transition-all ease-out duration-300 ">
-          <div className="sm:px-[18px]  py-[10px] hover:scale-[1.01] hover:shadow-gray-500 hover:shadow-md shadow-sm transition-all duration-300  cursor-pointer  rounded-lg border-black border-[1px] bg-[#6e7f21] flex items-center  ">
+          <div className="sm:px-[18px]  py-[10px] hover:scale-[1.01] hover:shadow-gray-500 hover:shadow-md shadow-sm transition-all duration-300  cursor-pointer rounded-lg border-black border-[1px] bg-[#6e7f21] flex items-center  ">
             <div className="rounded-full bg-[#a5bc00] relative w-[40px] h-[40px]">
               <Image src="/images/right-arrow.svg" fill alt="right arrow" />
             </div>

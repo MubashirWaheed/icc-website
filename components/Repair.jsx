@@ -3,8 +3,10 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "@/styles/repair.module.css";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { useWindowSize } from "react-use";
 
 const Repair = () => {
+  const { width } = useWindowSize();
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -13,24 +15,37 @@ const Repair = () => {
     // offset: ["start start", "end start"],
   });
 
-  // correct values for test: [0, 1], ["200px", "0px"]
-  // const test = useTransform(scrollYProgress, [0, 1], ["200px", "0px"]);
-
-  const xDirection = useTransform(
-    scrollYProgress,
-    [0, 0.5, 1],
-    ["-50px", "200px", "-5px"]
-  );
-  const yDirection = useTransform(
-    scrollYProgress,
-    [0, 0.5, 1],
-    ["370px", "200px", "-50px"]
-  );
-
   const changeDirection = useTransform(scrollYProgress, (pos) => {
     console.log("pos: ", pos);
     return pos > 0.3 && pos < 0.57 ? 180 : 0;
   });
+
+  const xlgDirection = ["-50px", "200px", "0px"];
+  const ylgDirection = ["370px", "200px", "-50px"];
+  const x2xlDirection = ["-50px", "600px", "0px"];
+  const y2xlDirection = ["570px", "200px", "-50px"];
+  const xtest = ["0px", "220px", "20px"];
+  const ytest = ["320px", "140px", "-30px"];
+
+  const styles = {
+    translateY:
+      width < 768
+        ? useTransform(scrollYProgress, [0, 0.5, 1], ylgDirection)
+        : width < 1024
+        ? useTransform(scrollYProgress, [0, 0.5, 1], y2xlDirection)
+        : width < 1280
+        ? useTransform(scrollYProgress, [0, 0.5, 1], ytest)
+        : useTransform(scrollYProgress, [0, 0.5, 1], ytest),
+    translateX:
+      width < 768
+        ? useTransform(scrollYProgress, [0, 0.5, 1], xlgDirection)
+        : width < 1024
+        ? useTransform(scrollYProgress, [0, 0.5, 1], x2xlDirection)
+        : width < 1280
+        ? useTransform(scrollYProgress, [0, 0.5, 1], xtest)
+        : useTransform(scrollYProgress, [0, 0.5, 1], xtest),
+    rotateY: changeDirection,
+  };
 
   return (
     <div className="mt-[30px] w-full  max-w-[1180px] flex flex-col overflow-hidden">
@@ -218,11 +233,7 @@ const Repair = () => {
           {/* CAR  */}
           <motion.div
             ref={targetRef}
-            style={{
-              translateY: yDirection,
-              translateX: xDirection,
-              rotateY: changeDirection,
-            }}
+            style={styles}
             className="absolute top-[70px] left-[230px] lg:top-[30px] lg:left-[350px] 2xl:top-[70px] 2xl:left-[420px] "
           >
             <div className="relative sm:w-[60px] sm:h-[60px] lg:w-[120px] lg:h-[120px]">
