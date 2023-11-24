@@ -12,12 +12,20 @@ export default function Home() {
       {undercontruction === true ? (
         ""
       ) : (
-        <div className="flex bg-[#2f2f2f] justify-center">
-          <div className="max-w-[1536px] relative overflow-y-auto   flex flex-col items-center justify-center">
+        <div className=" flex bg-[#2f2f2f] justify-center">
+          <div className="max-w-[1600px] relative overflow-y-auto   flex flex-col items-center justify-center">
             <Hero />
             <Services />
             <Repair />
-            <Footer />
+            <div className="fixed left-[30px] bottom-[30px] hover:scale-105 transition-all z-50 cursor-pointer  bg-primaryGreen rounded-full">
+              <div className="relative w-[60px] h-[60px]">
+                <Image
+                  src="/images/whatsapp-transparent.svg"
+                  fill
+                  alt="whatsapp logo"
+                />
+              </div>
+            </div>
 
             <div className="z-0 absolute sm:top-[480px] sm:right-0 md:top-[600px] lg:top-[700px] xl:top-[700px] 2xl:top-[680px]  ">
               <div className="relative sm:w-[260px] sm:h-[220px] lg:w-[400px] lg:h-[400px]">

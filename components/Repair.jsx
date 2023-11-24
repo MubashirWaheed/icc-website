@@ -53,7 +53,7 @@ const Repair = () => {
   };
 
   return (
-    <div className="mt-[30px] w-full  max-w-[1180px] flex flex-col overflow-hidden">
+    <div className="mt-[30px] w-full  max-w-[1280px] flex flex-col overflow-hidden">
       <div className="flex flex-col">
         <h2 className="font-bold sm:py-[35px] lg:py-[50px] text-center text-white text-[32px] leading-3 md:text-[55px]">
           Steps to repair cars:
