@@ -19,6 +19,7 @@ const Repair = () => {
     console.log("pos: ", pos);
     return pos > 0.3 && pos < 0.57 ? 180 : 0;
   });
+  let xDirection, yDirection;
 
   const xlgDirection = ["-50px", "200px", "0px"];
   const ylgDirection = ["370px", "200px", "-50px"];
@@ -27,23 +28,27 @@ const Repair = () => {
   const xtest = ["0px", "220px", "20px"];
   const ytest = ["320px", "140px", "-30px"];
 
+  // Determine the appropriate direction array based on screen width
+
+  if (width < 768) {
+    xDirection = xlgDirection;
+    yDirection = ylgDirection;
+  } else if (width < 1024) {
+    xDirection = x2xlDirection;
+    yDirection = y2xlDirection;
+  } else if (width < 1280) {
+    xDirection = xtest;
+    yDirection = ytest;
+  } else {
+    xDirection = xtest;
+    yDirection = ytest;
+  }
+
+  const mytest = useTransform(scrollYProgress, [0, 0.5, 1], yDirection);
+  const mytest2 = useTransform(scrollYProgress, [0, 0.5, 1], xDirection);
   const styles = {
-    translateY:
-      width < 768
-        ? useTransform(scrollYProgress, [0, 0.5, 1], ylgDirection)
-        : width < 1024
-        ? useTransform(scrollYProgress, [0, 0.5, 1], y2xlDirection)
-        : width < 1280
-        ? useTransform(scrollYProgress, [0, 0.5, 1], ytest)
-        : useTransform(scrollYProgress, [0, 0.5, 1], ytest),
-    translateX:
-      width < 768
-        ? useTransform(scrollYProgress, [0, 0.5, 1], xlgDirection)
-        : width < 1024
-        ? useTransform(scrollYProgress, [0, 0.5, 1], x2xlDirection)
-        : width < 1280
-        ? useTransform(scrollYProgress, [0, 0.5, 1], xtest)
-        : useTransform(scrollYProgress, [0, 0.5, 1], xtest),
+    translateY: mytest,
+    translateX: mytest2,
     rotateY: changeDirection,
   };
 
