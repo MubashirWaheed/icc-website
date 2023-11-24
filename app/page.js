@@ -13,7 +13,7 @@ export default function Home() {
         ""
       ) : (
         <div className=" flex bg-[#2f2f2f] justify-center">
-          <div className="max-w-[1600px] relative overflow-y-auto   flex flex-col items-center justify-center">
+          <div className="max-w-[1600px] w-full relative overflow-y-auto   flex flex-col items-center justify-center">
             <Hero />
             <Services />
             <Repair />

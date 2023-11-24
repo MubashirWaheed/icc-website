@@ -4,12 +4,18 @@ import Stats from "./Stats";
 
 const Hero = () => {
   return (
-    <main className="w-full h-[90vh] bg-red-500">
+    <main className="w-full h-[90vh] ">
       {/* <div className="relative">
         <Image width={1500} height={500} src="/images/hero.png" alt="hero" />
       </div> */}
       <div className="relative w-full h-full">
-        <Image className="md:hidden" src="/images/hero.png" alt="hero" fill />
+        <Image
+          className="md:hidden"
+          src="/images/hero.png"
+          alt="hero"
+          fill
+          priority={true}
+        />
         <Image
           className=" hidden md:block"
           src="/images/hero.png"
@@ -17,6 +23,7 @@ const Hero = () => {
           // objectFit="cover"
           // objectPosition="center"
           alt="hero image"
+          priority={true}
         />
         <Image
           className=" hidden xl:block"
@@ -25,6 +32,7 @@ const Hero = () => {
           objectFit="cover"
           objectPosition="center"
           alt="hero image"
+          priority={true}
         />
         <div className="bg-black/75  absolute bottom-0 right-0 left-0 ">
           <Stats />
