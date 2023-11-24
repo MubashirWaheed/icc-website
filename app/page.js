@@ -9,7 +9,7 @@ export default function Home() {
   const undercontruction = false;
   return (
     <div>
-      {undercontruction === true ? (
+      {undercontruction === false ? (
         ""
       ) : (
         <div className="flex bg-[#2f2f2f] justify-center">

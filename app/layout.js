@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        {undercontruction == true ? (
+        {undercontruction == false ? (
           <>
             <div className="flex items-center justify-center h-full">
               <h1 className="text-[28px] mt-[10px] font-medium">
