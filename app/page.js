@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 
 export default function Home() {
-  const undercontruction = false;
+  const undercontruction = true;
   return (
     <div>
       {undercontruction === true ? (
