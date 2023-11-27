@@ -2,8 +2,9 @@
 import styles from "@/styles/footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import GoogleMap from "./GoogleMap";
-
+// import GoogleMap from "./GoogleMap";
+import dynamic from "next/dynamic";
+const GoogleMap = dynamic(() => import("./GoogleMap"), { ssr: false });
 const Footer = () => {
   return (
     <>

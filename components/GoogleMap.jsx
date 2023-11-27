@@ -3,6 +3,7 @@ import "leaflet/dist/leaflet.css";
 import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import { Icon } from "leaflet";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
 const GoogleMap = () => {
   const apikey = "b3534f2d7amsha159d5b473cb2dbp1e9736jsna83af3cb47a1";
