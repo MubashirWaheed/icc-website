@@ -31,14 +31,32 @@ const Footer = () => {
             <div className="">
               <div className="flex">
                 <div className="relative gap-2 xl:w-[30px] xl:h-[30px]">
-                  <Image src="/images/whatsapp-transparent.svg" fill />
+                  <Image
+                    src="/images/whatsapp-transparent.svg"
+                    fill
+                    alt="whatsapp logo"
+                  />
                 </div>
-                <p className="xl:text-[20px]">+97123456789</p>
+                <p className="xl:text-[20px]">+971523383358</p>
+              </div>
+              <div className="flex">
+                <div className="relative gap-2 xl:w-[30px] xl:h-[30px]">
+                  <Image
+                    src="/images/whatsapp-transparent.svg"
+                    fill
+                    alt="whatsapp logo"
+                  />
+                </div>
+                <p className="xl:text-[20px]">info@iccgarage.com</p>
               </div>
               <ul>
                 <li className="flex gap-2 xl:text-[20px] cursor-pointer">
                   <div className="relative xl:w-[30px] xl:h-[30px]">
-                    <Image src="/images/whatsapp-transparent.svg" fill />
+                    <Image
+                      src="/images/whatsapp-transparent.svg"
+                      fill
+                      alt="whatsapp logo"
+                    />
                   </div>
                   <Link href="https://www.instagram.com/icc_garage_uae/">
                     Icc_garage_uae
@@ -46,7 +64,11 @@ const Footer = () => {
                 </li>
                 <li className="flex gap-2 xl:text-[20px] cursor-pointer">
                   <div className="relative w-[20px] h-[20px]  xl:w-[30px] xl:h-[30px]">
-                    <Image src="/images/whatsapp-transparent.svg" fill />
+                    <Image
+                      src="/images/whatsapp-transparent.svg"
+                      fill
+                      alt="whatsapp"
+                    />
                   </div>
                   <Link
                     target="_blank"

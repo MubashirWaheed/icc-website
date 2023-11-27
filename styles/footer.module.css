@@ -3,6 +3,7 @@
   overflow-x: hidden;
   width: 100%;
   background-color: #575e21;
+  position: relative;
 }
 .footer > div {
   animation: advertising infinite linear 20s;

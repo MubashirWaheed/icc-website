@@ -6,18 +6,18 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 
 export default function Home() {
-  const undercontruction = false;
+  const undercontruction = true;
   return (
     <div>
       {undercontruction === true ? (
         ""
       ) : (
-        <div className=" flex bg-[#2f2f2f] justify-center">
-          <div className="max-w-[1900px] w-full relative overflow-y-auto   flex flex-col items-center justify-center">
+        <div className="flex bg-[#2f2f2f] justify-center">
+          <div className="max-w-[1900px] w-full relative overflow-y-auto  flex flex-col items-center justify-center">
             <Hero />
             <Services />
             <Repair />
-            <div className="fixed left-[30px] bottom-[30px] hover:scale-105 transition-all z-50 cursor-pointer  bg-primaryGreen rounded-full">
+            <div className="fixed z-50 left-[30px] bottom-[30px] hover:scale-105 transition-all  cursor-pointer bg-primaryGreen rounded-full">
               <div className="relative w-[60px] h-[60px]">
                 <Image
                   src="/images/whatsapp-transparent.svg"
