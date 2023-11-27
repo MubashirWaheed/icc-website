@@ -4,30 +4,36 @@ import { useState } from "react";
 
 const servicesRow1 = [
   {
+    icon: "/images/tools.svg",
     serviceName: "Minor/major service",
     description:
       "Fluids and filters replacement, engine service for keeping your car like new",
   },
   {
+    icon: "/images/tools.svg",
     serviceName: "Tunning programing",
     description: "Enhance power and torque - unleash the beast",
   },
   {
+    icon: "/images/settings.svg",
     serviceName: "Suspension service",
     description: "Inspect, repair, align—for smooth, safe rides",
   },
 ];
 const servicesRow2 = [
   {
+    icon: "/images/tools.svg",
     serviceName: "A/C Service",
     description: "Inspect, maintain, repair for cool driving",
   },
   {
+    icon: "/images/tools.svg",
     serviceName: "Body Shop",
     description:
       "Collision repair, denting, painting, refinishing and polishing ",
   },
   {
+    icon: "/images/settings.svg",
     serviceName: "Body Kits",
     description:
       "Installation, aligment, painting and polishing to make an exclusive vehicle ",
@@ -36,16 +42,19 @@ const servicesRow2 = [
 
 const servicesRow3 = [
   {
+    icon: "/images/settings.svg",
     serviceName: "Mechanical jobs",
     description:
       "Engine, gear, transfer case, brakes, steering and etc. diagnostic, maintenance and repair",
   },
   {
+    icon: "/images/tools.svg",
     serviceName: "Electrical jobs",
     description:
       "Electrical diagnostics, repairs, and maintenance for any electronic components",
   },
   {
+    icon: "/images/tools.svg",
     serviceName: "Diagnostic",
     description:
       "Identifying and analyzing vehicle issues using most advanced diagnostic tools and methods",
@@ -55,8 +64,8 @@ const servicesRow3 = [
 const generateDynamicStyles = (index) => {
   if (index === 1) {
     return `
-      before:content-[''] before:h-[120px] before:bg-primaryGreen before:w-[1px] lg:before:w-[3px]
-      after:content-[''] after:h-[120px] after:bg-primaryGreen after:w-[1px] lg:after:w-[3px]
+      before:content-[''] before:h-[120px] before:bg-primaryGreen before:w-[1px] lg:before:w-[1px]
+      after:content-[''] after:h-[120px] after:bg-primaryGreen after:w-[1px] lg:after:w-[1px]
     `;
   }
   return "";
@@ -85,8 +94,8 @@ const Services = () => {
               )}`}
             >
               <div className="bg-[#6E7D00] rounded-full p-[12px]">
-                <div className="relative w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] md:w-[38px] md:h-[38px]">
-                  <Image src="/images/tools.svg" alt="services" fill />
+                <div className="relative w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] md:w-[38px] md:h-[38px] xl:w-[50px] xl:h-[50px]">
+                  <Image src={item.icon} alt="services" fill />
                 </div>
               </div>
               <div className="text-center text-white sm:text-left ">
@@ -112,8 +121,8 @@ const Services = () => {
               flex flex-row items-center flex-1 gap-2 lg:flex-row sm:gap-2 md:gap-4`}
               >
                 <div className="bg-[#6E7D00] rounded-full p-[12px]">
-                  <div className="relative w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] md:w-[38px] md:h-[38px]">
-                    <Image src="/images/tools.svg" alt="services" fill />
+                  <div className="relative w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] md:w-[38px] md:h-[38px] xl:w-[50px] xl:h-[50px]">
+                    <Image src={item.icon} alt="services" fill />
                   </div>
                 </div>
                 <div className="text-center text-white sm:text-left ">
@@ -139,15 +148,15 @@ const Services = () => {
                 )}flex flex-row items-center flex-1 gap-2 lg:flex-row sm:gap-2 md:gap-4`}
               >
                 <div className="bg-[#6E7D00] rounded-full p-[12px]">
-                  <div className="relative w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] md:w-[38px] md:h-[38px]">
-                    <Image src="/images/tools.svg" alt="services" fill />
+                  <div className="relative w-[28px] h-[28px] sm:w-[32px] sm:h-[32px] md:w-[38px] md:h-[38px] xl:w-[50px] xl:h-[50px]">
+                    <Image src={item.icon} alt="services" fill />
                   </div>
                 </div>
                 <div className="text-center text-white sm:text-left ">
                   <p className="text-[22px] sm:text-[18px] sm: md:text-[20px] md:leading-5 lg:text-[28px] cursor-pointer hover:underline">
                     {item.serviceName}
                   </p>
-                  <p className="sm:text-[12px] md:text-[14px] md:leading-[18px] md:mt-[5px] lg:mt-[0px]  lg:text-[16px] lg:leading-5 xl:text-[18px] xl:leading-7 2xl:text-[20px]  font-light">
+                  <p className="  sm:text-[12px] md:text-[14px] md:leading-[18px] md:mt-[5px]  lg:text-[16px] lg:leading-5 xl:text-[18px] xl:leading-7 2xl:text-[20px]  font-light">
                     {item.description}
                   </p>
                 </div>
@@ -158,7 +167,7 @@ const Services = () => {
 
         {/* CONTACT POP UP*/}
         <div className=" z-50 relative group transition-all ease-out duration-300 ">
-          <div className="sm:px-[18px]  py-[10px] hover:scale-[1.01] hover:shadow-gray-500 hover:shadow-md shadow-sm transition-all duration-300  cursor-pointer rounded-lg border-black border-[1px] bg-[#6e7f21] flex items-center  ">
+          <div className="sm:px-[18px]  py-[10px] hover:scale-[1.01] hover:shadow-gray-500 hover:shadow-md shadow-sm transition-all duration-300  cursor-pointer rounded-lg border-black border-[1px] bg-[#6e7f21] flex items-center">
             <div className="rounded-full bg-[#a5bc00] relative w-[40px] h-[40px]">
               <Image src="/images/right-arrow.svg" fill alt="right arrow" />
             </div>

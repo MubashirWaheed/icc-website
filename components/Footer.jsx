@@ -1,6 +1,8 @@
+"use client ";
 import styles from "@/styles/footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import GoogleMap from "./GoogleMap";
 
 const Footer = () => {
   return (
@@ -26,14 +28,25 @@ const Footer = () => {
               Follow Us:
             </h4>
             <div className="">
-              <p className="xl:text-[20px]">+97123456789</p>
+              <div className="flex">
+                <div className="relative gap-2 xl:w-[30px] xl:h-[30px]">
+                  <Image src="/images/whatsapp-transparent.svg" fill />
+                </div>
+                <p className="xl:text-[20px]">+97123456789</p>
+              </div>
               <ul>
-                <li className="xl:text-[20px] cursor-pointer">
+                <li className="flex gap-2 xl:text-[20px] cursor-pointer">
+                  <div className="relative xl:w-[30px] xl:h-[30px]">
+                    <Image src="/images/whatsapp-transparent.svg" fill />
+                  </div>
                   <Link href="https://www.instagram.com/icc_garage_uae/">
                     Icc_garage_uae
                   </Link>
                 </li>
-                <li className="xl:text-[20px] cursor-pointer">
+                <li className="flex gap-2 xl:text-[20px] cursor-pointer">
+                  <div className="relative w-[20px] h-[20px]  xl:w-[30px] xl:h-[30px]">
+                    <Image src="/images/whatsapp-transparent.svg" fill />
+                  </div>
                   <Link
                     target="_blank"
                     href="https://www.facebook.com/ICCGarage/"
@@ -62,12 +75,12 @@ const Footer = () => {
             <div className="">
               <p className="xl:text-[20px] font-bold">Dubai</p>
               <p className="xl:text-[20px]">
-                Al Quoz Industrial Area 3, streey 22 United Arab Emirates
+                Al Quoz Industrial Area 3, street 22 United Arab Emirates
               </p>
             </div>
           </div>
           <div className="flex-1 flex h-full justify-center items-center">
-            <Link
+            {/* <Link
               target="_blank"
               href="https://www.google.com/maps/place/ICC+-+Intensive+Car+Care/@25.1223887,55.2208276,17z/data=!4m6!3m5!1s0x3e5f6bdb00000001:0xe5da10f8148c0701!8m2!3d25.1223887!4d55.2208276!16s%2Fg%2F11bccj809j?entry=ttu"
             >
@@ -81,7 +94,10 @@ const Footer = () => {
                   src="/images/map.png"
                 />
               </div>
-            </Link>
+            </Link> */}
+            <div className=" lg:w-[200px] sm:h-[80px] xl:w-[220px] ">
+              <GoogleMap />
+            </div>
           </div>
         </div>
       </div>

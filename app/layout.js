@@ -19,7 +19,7 @@ const navigationData = [
 ];
 
 export default function RootLayout({ children }) {
-  const undercontruction = true;
+  const undercontruction = false;
   return (
     <html lang="en">
       <body className={inter.className}>

@@ -1,18 +1,32 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import Stats from "./Stats";
+import { useWindowSize } from "react-use";
 
 const Hero = () => {
+  const { width } = useWindowSize();
   return (
-    <main className="w-full  h-[80%] ">
-      <div className="relative h-full">
-        <Image
-          src="/images/hero.png"
-          alt="hero"
-          objectFit="contain"
-          objectPosition="center"
-          layout="fill"
-        />
+    <>
+      <div className="relative w-full h-[90vh]">
+        {width > 640 ? (
+          <Image className="" src="/images/desktoptest.gif" alt="hero" fill />
+        ) : (
+          <Image className="" src="/images/phonefinal.jpg" alt="hero" fill />
+        )}
+
+        {/* <Image
+          // className="block  xl:hidden"
+          // src="/images/phone.jpg"
+          // alt="hero"
+          // width="1600"
+          // height="800"
+          // objectFit="cover"
+          // objectPosition="center"
+          // layout="fill"
+          // fill
+          // className="w-full h-full top-0 left-0 object-cover "
+        /> */}
       </div>
 
       {/* <div className="relative">
@@ -73,7 +87,7 @@ const Hero = () => {
         />
       </div> */}
       {/* </div> */}
-    </main>
+    </>
   );
 };
 
@@ -81,3 +95,9 @@ export default Hero;
 {
   /* <div className="absolute bg-black bg-opacity-40  inset-0"></div> */
 }
+
+// width="1600"
+// height="800"
+// objectFit="cover"
+// objectPosition="center"
+// layout="fill"

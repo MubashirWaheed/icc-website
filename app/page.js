@@ -6,14 +6,14 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 
 export default function Home() {
-  const undercontruction = true;
+  const undercontruction = false;
   return (
     <div>
       {undercontruction === true ? (
         ""
       ) : (
         <div className=" flex bg-[#2f2f2f] justify-center">
-          <div className="max-w-[1600px] w-full relative overflow-y-auto   flex flex-col items-center justify-center">
+          <div className="max-w-[1900px] w-full relative overflow-y-auto   flex flex-col items-center justify-center">
             <Hero />
             <Services />
             <Repair />
@@ -27,7 +27,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="z-0 absolute sm:top-[480px] sm:right-0 md:top-[600px] lg:top-[700px] xl:top-[700px] 2xl:top-[680px]  ">
+            {/* <div className="z-0 absolute sm:top-[480px] sm:right-0 md:top-[600px] lg:top-[700px] xl:top-[700px] 2xl:top-[680px]  ">
               <div className="relative sm:w-[260px] sm:h-[220px] lg:w-[400px] lg:h-[400px]">
                 <Image src="/images/pattern2.png" fill alt="pattern" />
               </div>
@@ -36,7 +36,7 @@ export default function Home() {
               <div className="relative sm:w-[400px] sm:h-[140px] lg:w-[600px] lg:h-[200px] 2xl:w-[700px] 2xl:h-[260px] ">
                 <Image src="/images/pattern3.png" fill alt="pattern3" />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       )}
