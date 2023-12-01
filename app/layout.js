@@ -95,6 +95,7 @@ export default function RootLayout({ children }) {
         )}
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

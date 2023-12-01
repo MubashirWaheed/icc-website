@@ -1,5 +1,3 @@
-import React from "react";
-
 const Stats = () => {
   return (
     <div className=" w-full pt-[10px] sm:py-[10px] md:py-[10px] lg:py-[15px] shrink-0 flex gap-[10px] flex-col sm:flex-row flex-wrap  text-white text-center ">

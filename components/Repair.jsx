@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "@/styles/repair.module.css";
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useWindowSize } from "react-use";
 import Steps from "./Steps";
 
