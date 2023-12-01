@@ -1,16 +1,30 @@
 import { useScroll, motion, useTransform } from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { useWindowSize } from "react-use";
 
 const Steps = () => {
   const targetRef = useRef(null);
+  const { width } = useWindowSize();
+  const [yDirection, setYDirection] = useState([
+    "0px",
+    "50px",
+    "250px",
+    "450px",
+    "650px",
+    "800px",
+    "1150px",
+    "1450px",
+    "1660px",
+    "1900px",
+  ]);
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start end", "end end"],
   });
 
-  const direction = [
+  let test1 = [
     "0px",
     "50px",
     "250px",
@@ -23,10 +37,47 @@ const Steps = () => {
     "1900px",
   ];
 
+  let lgDirection = [
+    "0px",
+    "20px",
+    "200px",
+    "400px",
+    "500px",
+    "650px",
+    "800px",
+    "1050px",
+    "1350px",
+    "1550px",
+  ];
+
+  // xl screen and onwards
+  const xldirection = [
+    "0px",
+    "50px",
+    "250px",
+    "450px",
+    "700px",
+    "950px",
+    "1150px",
+    "1450px",
+    "1660px",
+    "1900px",
+  ];
+
+  useEffect(() => {
+    if (width > 1280) {
+      setYDirection(xldirection);
+    } else if (width > 1024) {
+      setYDirection(lgDirection);
+    } else {
+      setYDirection(test1);
+    }
+  }, [width]);
+
   const test = useTransform(
     scrollYProgress,
     [0, 0.11, 0.22, 0.33, 0.44, 0.55, 0.66, 0.77, 0.88, 1],
-    direction
+    yDirection
   );
 
   const styles = {
@@ -209,8 +260,8 @@ const Steps = () => {
       </div>
 
       {/* STRAIGHT LINE */}
-      <div className="absolute xl:left-[530px] xl:top-[200px] 2xl:left:[300px] 2xl:top-[160px] z-10 opacity-50">
-        <div className="relative xl:w-[200px] xl:h-[1750px] ">
+      <div className="absolute md:left-[43%] lg:left-[40%] lg:top-[150px] xl:left-[530px] xl:top-[180px] 2xl:left:[300px] 2xl:top-[160px] z-10 opacity-50">
+        <div className="relative md:w-[120px] md:h-[1450px] lg:w-[150px] lg:h-[1500px]  xl:w-[200px] xl:h-[1870px] ">
           <Image src="/images/straightLine.svg" fill alt="striaght line" />
         </div>
       </div>
@@ -219,9 +270,9 @@ const Steps = () => {
       {/* className="absolute top-[70px] left-[230px] lg:top-[30px] lg:left-[350px] 2xl:top-[70px] 2xl:left-[420px] " */}
       <motion.div
         style={styles}
-        className="will-change-transform absolute left-[230px] lg:left-[350px] xl:left-[42%] z-20"
+        className="will-change-transform absolute left-[230px] md:left-[40%] lg:left-[40%] xl:left-[42%] z-20"
       >
-        <div className="relative sm:w-[60px] sm:h-[60px] lg:w-[120px] lg:h-[120px] xl:w-[220px] xl:h-[220px] z-20 ">
+        <div className="relative sm:w-[60px] sm:h-[60px] md:w-[130px] md:h-[130px] lg:w-[150px] lg:h-[100px] xl:w-[220px] xl:h-[170px] z-20 ">
           <Image src="/images/car.svg" alt="car" fill />
         </div>
       </motion.div>

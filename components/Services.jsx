@@ -11,9 +11,11 @@ const servicesRow1 = [
   },
   {
     icon: "/images/tools.svg",
-    serviceName: "Tunning programing",
-    description: "Enhance power and torque - unleash the beast",
+    serviceName: "Diagnostic",
+    description:
+      "Identifying and analyzing vehicle issues using most advanced diagnostic tools and methods",
   },
+
   {
     icon: "/images/settings.svg",
     serviceName: "Suspension service",
@@ -55,9 +57,8 @@ const servicesRow3 = [
   },
   {
     icon: "/images/tools.svg",
-    serviceName: "Diagnostic",
-    description:
-      "Identifying and analyzing vehicle issues using most advanced diagnostic tools and methods",
+    serviceName: "Tunning programing",
+    description: "Enhance power and torque - unleash the beast",
   },
 ];
 
@@ -82,7 +83,7 @@ const Services = () => {
       <h2 className="font-bold sm:py-[26px] md:py-[40px] lg:py-[50px] text-center text-white  text-[32px] leading-3 md:text-[55px]">
         Our services include:
       </h2>
-      <div className="px-[10px] max-w-[1280px] flex flex-col items-center justify-between gap-6 ">
+      <div className="px-[10px] max-w-[1280px] flex flex-col items-center justify-between gap-6 xl:gap-7 ">
         {/* ROW */}
         <div className="flex flex-col gap-4 sm:flex-row ">
           {servicesRow1.map((item, index) => (
@@ -98,11 +99,11 @@ const Services = () => {
                   <Image src={item.icon} alt="services" fill />
                 </div>
               </div>
-              <div className="text-center text-white sm:text-left ">
+              <div className="h-full text-center text-white sm:text-left ">
                 <span className="sm:text-[18px] md:text-[20px] lg:text-[28px] cursor-pointer md:leading-3 lg:leading-6 hover:underline">
                   {item.serviceName}
                 </span>
-                <p className="sm:text-[12px] md:text-[14px] md:leading-[18px] lg:text-[16px] lg:leading-5 xl:text-[20px] xl:leading-7 2xl:text-[22px]  font-light">
+                <p className="lg:mt-[10px] sm:text-[12px] md:text-[14px] md:leading-[18px] lg:text-[16px] lg:leading-5 xl:text-[20px] xl:leading-7 2xl:text-[22px]  font-light">
                   {item.description}
                 </p>
               </div>
@@ -125,11 +126,11 @@ const Services = () => {
                     <Image src={item.icon} alt="services" fill />
                   </div>
                 </div>
-                <div className="text-center text-white sm:text-left ">
-                  <p className="sm:text-[18px] md:text-[20px] lg:text-[28px] cursor-pointer hover:underline">
+                <div className=" text-center h-full  text-white sm:text-left">
+                  <p className=" sm:text-[18px] md:text-[20px] lg:text-[28px] cursor-pointer hover:underline">
                     {item.serviceName}
                   </p>
-                  <p className="sm:text-[12px] md:text-[14px] md:leading-[18px] lg:text-[16px] lg:leading-5 xl:text-[20px] xl:leading-7 2xl:text-[22px]  font-light">
+                  <p className="lg:mt-[10px] sm:text-[12px] md:text-[14px] md:leading-[18px] lg:text-[16px] lg:leading-5 xl:text-[20px] xl:leading-7 2xl:text-[22px]  font-light">
                     {item.description}
                   </p>
                 </div>
@@ -152,11 +153,11 @@ const Services = () => {
                     <Image src={item.icon} alt="services" fill />
                   </div>
                 </div>
-                <div className="text-center text-white sm:text-left ">
+                <div className="h-full  text-center text-white sm:text-left ">
                   <p className="text-[22px] sm:text-[18px] sm: md:text-[20px] md:leading-5 lg:text-[28px] cursor-pointer hover:underline">
                     {item.serviceName}
                   </p>
-                  <p className="  sm:text-[12px] md:text-[14px] md:leading-[18px] md:mt-[5px]  lg:text-[16px] lg:leading-5 xl:text-[20px] xl:leading-7 2xl:text-[22px]  font-light">
+                  <p className="lg:mt-[15px] sm:text-[12px] md:text-[14px] md:leading-[18px] md:mt-[5px]  lg:text-[16px] lg:leading-5 xl:text-[20px] xl:leading-7 2xl:text-[22px] font-light">
                     {item.description}
                   </p>
                 </div>
@@ -166,20 +167,20 @@ const Services = () => {
         </div>
 
         {/* CONTACT POP UP*/}
-        <div className=" z-50 relative group transition-all ease-out duration-300 ">
-          <div className="sm:px-[18px]  py-[10px] hover:scale-[1.01] hover:shadow-gray-500 hover:shadow-md shadow-sm transition-all duration-300  cursor-pointer rounded-lg border-black border-[1px] bg-[#6e7f21] flex items-center">
-            <div className="rounded-full bg-[#a5bc00] relative w-[40px] h-[40px]">
+        <div className="z-50 relative group transition-all ease-out duration-300 rounded-2xl">
+          <div className="sm:px-[18px] lg:px-[30px]  py-[10px] lg:py-[20px] hover:scale-[1.01] hover:shadow-gray-500 hover:shadow-md shadow-sm transition-all duration-300  cursor-pointer rounded-3xl border-black border-[1px] bg-[#606727] flex items-center">
+            <div className="rounded-full bg-[#a5bc00] relative w-[40px] h-[40px] xl:w-[60px] xl:h-[60px]">
               <Image src="/images/right-arrow.svg" fill alt="right arrow" />
             </div>
-            <p className="sm:px-[18px] text-[20px] font-normal text-[#a5bc00] uppercase">
+            <p className="sm:px-[18px] lg:text-[24px] xl:text-[28px] font-normal xl:font-medium text-[#a5bc00] uppercase leading-8">
               Special request
             </p>
           </div>
           {/* display this on hover */}
-          <div className="  w-full rounded-lg absolute group-hover:opacity-100 group-hover:block hidden   opacity-0 transition-all bg-secondaryGreen py-[10px]">
+          <div className="w-full rounded-3xl absolute group-hover:opacity-100 group-hover:block hidden  pacity-0 transition-all bg-[#606727] py-[10px]">
             <form className="sm:px-[10px] flex flex-col w-full">
               <input
-                className="text-white my-[5px] sm:px-[10px] sm:py-[5px] placeholder:text-[12px] focus:outline-black focus:border-none  placeholder-white sm:rounded-md  border-b-[1px] border-white bg-secondaryGreen"
+                className="text-white my-[5px] sm:px-[10px] sm:py-[5px] lg:py-[10px] lg:text-[20px] placeholder:text-[16px] focus:outline-black focus:border-none  placeholder-white sm:rounded-md  border-b-[1px] border-white bg-[#606727]"
                 name="name"
                 type="text"
                 value={name}
@@ -187,7 +188,7 @@ const Services = () => {
                 onChange={(e) => setName(e.target.value)}
               />
               <input
-                className="my-[5px] sm:px-[10px] sm:py-[5px] placeholder:text-[12px] text-white focus:outline-black focus:border-none  placeholder-white sm:rounded-md  border-b-[1px] border-white bg-secondaryGreen"
+                className="lg:py-[10px] lg:text-[20px] my-[5px] sm:px-[10px] sm:py-[5px] placeholder:text-[16px] text-white focus:outline-black focus:border-none  placeholder-white sm:rounded-md  border-b-[1px] border-white bg-[#606727]"
                 name="phone"
                 text="number"
                 value={phone}
@@ -195,7 +196,7 @@ const Services = () => {
                 onChange={(e) => setPhone(e.target.value)}
               />
               <input
-                className="my-[5px] sm:px-[10px] sm:py-[5px] placeholder:text-[12px] text-white focus:outline-black focus:border-none  placeholder-white sm:rounded-md  border-b-[1px] border-white bg-secondaryGreen"
+                className="lg:py-[10px] lg:text-[20px] my-[5px] sm:px-[10px] sm:py-[5px] placeholder:text-[16px] text-white focus:outline-black focus:border-none  placeholder-white sm:rounded-md  border-b-[1px] border-white bg-[#606727]"
                 name="model"
                 type="text"
                 value={model}
@@ -203,7 +204,7 @@ const Services = () => {
                 onChange={(e) => setModel(e.target.value)}
               />
               <input
-                className="focus:outline-black text-white  placeholder:text-[12px] focus:border-none my-[5px] sm:px-[10px] sm:py-[5px] placeholder-white sm:rounded-md  border-b-[1px] border-white bg-secondaryGreen"
+                className="lg:py-[10px] lg:text-[20px] focus:outline-black text-white  placeholder:text-[16px] focus:border-none my-[5px] sm:px-[10px] sm:py-[5px] placeholder-white sm:rounded-md  border-b-[1px] border-white bg-[#606727]"
                 name="comment"
                 type="text"
                 value={comment}

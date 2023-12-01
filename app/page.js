@@ -4,6 +4,7 @@ import Image from "next/image";
 import Stats from "@/components/Stats";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import Link from "next/link";
 
 export const metadata = {
   title: "ICC Gargage",
@@ -22,7 +23,13 @@ export default function Home() {
             <Hero />
             <Services />
             <Repair />
-            <div className="fixed z-50 left-[30px] bottom-[30px] hover:scale-105 transition-all  cursor-pointer bg-primaryGreen rounded-full">
+            <Link
+              target="_blank"
+              href="https://api.whatsapp.com/send/?phone=%2B971523383358&text&type=phone_number&app_absent=0"
+              // href="//api.whatsapp.com/send?phone=91MOBILE_NUMBER&text=WHATEVER_LINK_OR_TEXT_YOU_WANT_TO_SEND"
+              // href="https://api.whatsapp.com/"
+              className=" fixed z-50 left-[30px] bottom-[30px] hover:scale-105 transition-all  cursor-pointer bg-primaryGreen rounded-full"
+            >
               <div className="relative w-[60px] h-[60px]">
                 <Image
                   src="/images/whatsapp-transparent.svg"
@@ -30,7 +37,7 @@ export default function Home() {
                   alt="whatsapp logo"
                 />
               </div>
-            </div>
+            </Link>
 
             {/* <div className="z-0 absolute sm:top-[480px] sm:right-0 md:top-[600px] lg:top-[700px] xl:top-[700px] 2xl:top-[680px]  ">
               <div className="relative sm:w-[260px] sm:h-[220px] lg:w-[400px] lg:h-[400px]">
