@@ -5,8 +5,13 @@ import Stats from "@/components/Stats";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 
+export const metadata = {
+  title: "ICC Gargage",
+  description: "Get the best service in Dubai",
+};
+
 export default function Home() {
-  const undercontruction = true;
+  const undercontruction = false;
   return (
     <div>
       {undercontruction === true ? (

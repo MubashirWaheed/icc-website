@@ -5,7 +5,7 @@ const Stats = () => {
     <div className=" w-full pt-[10px] sm:py-[10px] md:py-[10px] lg:py-[15px] shrink-0 flex gap-[10px] flex-col sm:flex-row flex-wrap  text-white text-center ">
       <div className="sm:flex-1 ">
         <p className="text-[28px] md:text-[38px]  font-light">10,000+</p>
-        <p className="text-[14px] md:text-[17px] font-light ">
+        <p className="text-[14px] md:text-[17px] xl:text-[20px] font-normal">
           Number of satisfied clients
         </p>
       </div>
@@ -20,14 +20,18 @@ const Stats = () => {
           </span>
         </div>
 
-        <p className="text-[14px] md:text-[17px] font-light">Service area</p>
+        <p className="text-[14px] md:text-[17px] xl:text-[20px] font-normal">
+          Service area
+        </p>
       </div>
 
       <div className="sm:flex-1 ">
-        <p className="opacity-100 text-[28px] md:text-[38px] font-light">
+        <p className="opacity-100 text-[28px]  md:text-[38px] font-light">
           15,000+
         </p>
-        <p className="text-[14px] md:text-[17px] font-light">Serviced cars</p>
+        <p className="text-[14px] xl:text-[20px] md:text-[17px] font-normal">
+          Serviced cars
+        </p>
       </div>
     </div>
   );

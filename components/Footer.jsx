@@ -10,14 +10,14 @@ const Footer = () => {
     <>
       <footer className={styles.footer}>
         <div className="w-[4400px] text-white flex gap-6">
-          <span className="whitespace-nowrap uppercase  text-white w-full font-medium text-[22px]">
+          <span className="whitespace-nowrap uppercase  text-white w-full font-medium text-[22px] xl:text-[26px]">
             WE MAKE YOUR CAR FEEL LIKE NEW
           </span>
 
-          <span className="whitespace-nowrap uppercase inline-block w-full text-[22px]">
+          <span className="whitespace-nowrap uppercase inline-block w-full text-[22px] xl:text-[26px]">
             WE MAKE YOUR CAR FEEL LIKE NEW
           </span>
-          <span className="whitespace-nowrap inline-block w-full text-[22px] uppercase">
+          <span className="whitespace-nowrap inline-block w-full text-[22px] xl:text-[26px] uppercase">
             WE MAKE YOUR CAR FEEL LIKE NEW
           </span>
         </div>
@@ -103,7 +103,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex-1 flex h-full justify-center items-center">
-            {/* <Link
+            <Link
               target="_blank"
               href="https://www.google.com/maps/place/ICC+-+Intensive+Car+Care/@25.1223887,55.2208276,17z/data=!4m6!3m5!1s0x3e5f6bdb00000001:0xe5da10f8148c0701!8m2!3d25.1223887!4d55.2208276!16s%2Fg%2F11bccj809j?entry=ttu"
             >
@@ -117,10 +117,10 @@ const Footer = () => {
                   src="/images/map.png"
                 />
               </div>
-            </Link> */}
-            <div className=" lg:w-[200px] sm:h-[80px] xl:w-[220px] ">
+            </Link>
+            {/* <div className=" lg:w-[200px] sm:h-[80px] xl:w-[220px] ">
               <GoogleMap />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

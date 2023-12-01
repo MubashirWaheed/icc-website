@@ -102,7 +102,7 @@ const Services = () => {
                 <span className="sm:text-[18px] md:text-[20px] lg:text-[28px] cursor-pointer md:leading-3 lg:leading-6 hover:underline">
                   {item.serviceName}
                 </span>
-                <p className="sm:text-[12px] md:text-[14px] md:leading-[18px] lg:text-[16px] lg:leading-5 xl:text-[18px] xl:leading-7 2xl:text-[20px]  font-light">
+                <p className="sm:text-[12px] md:text-[14px] md:leading-[18px] lg:text-[16px] lg:leading-5 xl:text-[20px] xl:leading-7 2xl:text-[22px]  font-light">
                   {item.description}
                 </p>
               </div>
@@ -129,7 +129,7 @@ const Services = () => {
                   <p className="sm:text-[18px] md:text-[20px] lg:text-[28px] cursor-pointer hover:underline">
                     {item.serviceName}
                   </p>
-                  <p className="sm:text-[12px] md:text-[14px] md:leading-[18px] lg:text-[16px] lg:leading-5 xl:text-[18px] xl:leading-7 2xl:text-[20px]  font-light">
+                  <p className="sm:text-[12px] md:text-[14px] md:leading-[18px] lg:text-[16px] lg:leading-5 xl:text-[20px] xl:leading-7 2xl:text-[22px]  font-light">
                     {item.description}
                   </p>
                 </div>
@@ -156,7 +156,7 @@ const Services = () => {
                   <p className="text-[22px] sm:text-[18px] sm: md:text-[20px] md:leading-5 lg:text-[28px] cursor-pointer hover:underline">
                     {item.serviceName}
                   </p>
-                  <p className="  sm:text-[12px] md:text-[14px] md:leading-[18px] md:mt-[5px]  lg:text-[16px] lg:leading-5 xl:text-[18px] xl:leading-7 2xl:text-[20px]  font-light">
+                  <p className="  sm:text-[12px] md:text-[14px] md:leading-[18px] md:mt-[5px]  lg:text-[16px] lg:leading-5 xl:text-[20px] xl:leading-7 2xl:text-[22px]  font-light">
                     {item.description}
                   </p>
                 </div>
