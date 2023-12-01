@@ -24,7 +24,13 @@ const Hero = () => {
           </div>
         ) : (
           <div>
-            <Image className="" src="/images/herophone.png" alt="hero" fill />
+            <Image
+              priority={true}
+              className=""
+              src="/images/herophone.png"
+              alt="hero"
+              fill
+            />
             {/* <div className="bg-black/75  absolute bottom-0 right-0 left-0 ">
               <Stats />
             </div> */}

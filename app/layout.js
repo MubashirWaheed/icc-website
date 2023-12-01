@@ -30,7 +30,6 @@ export default function RootLayout({ children }) {
                 Website under development
               </h1>
             </div>
-            <Analytics />
           </>
         ) : (
           <div className="bg-[#232323] flex items-center justify-center">
