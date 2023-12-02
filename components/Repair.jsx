@@ -2,12 +2,9 @@
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "@/styles/repair.module.css";
-import { useWindowSize } from "react-use";
 import Steps from "./Steps";
 
 const Repair = () => {
-  const { width } = useWindowSize();
-
   // const { scrollYProgress } = useScroll({
   //   target: targetRef,
   //   // offset: ["start start", "start end"],

@@ -1,8 +1,6 @@
 import Repair from "@/components/Repair";
 import Services from "@/components/Services";
 import Image from "next/image";
-import Stats from "@/components/Stats";
-import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Link from "next/link";
 
@@ -12,7 +10,7 @@ export const metadata = {
 };
 
 export default function Home() {
-  const undercontruction = false;
+  const undercontruction = true;
   return (
     <div>
       {undercontruction === true ? (
