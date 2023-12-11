@@ -1,8 +1,14 @@
 "use client";
-import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "@/styles/repair.module.css";
-import Steps from "./Steps";
+import Steps from "./components/Steps";
+import { Inder } from "next/font/google";
+
+const inder = Inder({
+  subsets: ["latin"],
+  variable: "--font-inder",
+  weight: "400",
+});
 
 const Repair = () => {
   // const { scrollYProgress } = useScroll({
@@ -33,7 +39,9 @@ const Repair = () => {
   return (
     <div className="mt-[30px] w-full  max-w-[1280px] flex flex-col overflow-hidden">
       <div className="flex flex-col">
-        <h2 className="font-bold sm:py-[35px] lg:py-[50px] text-center text-white text-[32px] leading-3 md:text-[55px]">
+        <h2
+          className={`${inder.variable} font-medium font-inder sm:py-[35px] lg:py-[50px] text-center text-white text-[32px] md:text-[55px] lg:text-[65px] leading-3 `}
+        >
           Steps to repair cars:
         </h2>
         <Steps />

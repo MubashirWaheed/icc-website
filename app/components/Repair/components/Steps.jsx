@@ -2,6 +2,13 @@ import { useScroll, motion, useTransform } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useWindowSize } from "react-use";
+import { Inder } from "next/font/google";
+
+const inder = Inder({
+  subsets: ["latin"],
+  variable: "--font-inder",
+  weight: "400",
+});
 
 const Steps = () => {
   const targetRef = useRef(null);
@@ -99,7 +106,9 @@ const Steps = () => {
             <div className="relative w-[30px] h-[30px] sm:w-[60px] sm:h-[60px]  md:w-[80px] md:h-[80px]  lg:w-[100px] lg:h-[100px] xl:w-[100px] xl:h-[140px]">
               <Image src="/images/1.svg" alt="first step" fill />
             </div>
-            <h2 className="text-white self-end sm:text-[18px] md:text-[20px] md:leading-6 lg:text-[30px] xl:text-[30px]">
+            <h2
+              className={`${inder.variable} font-inder text-white self-end sm:text-[18px] md:text-[20px] md:leading-6 lg:text-[30px] xl:text-[30px]`}
+            >
               Car Pick Up
             </h2>
           </div>
@@ -114,7 +123,9 @@ const Steps = () => {
           <div className="relative sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] xl:w-[100] xl:h-[140px]">
             <Image src="/images/2.svg" alt="first step" fill />
           </div>
-          <h2 className="self-end text-white sm:text-[18px] md:text-[20px] md:leading-6 lg:text-[30px] xl:text-[30px]">
+          <h2
+            className={`${inder.variable} mb-[10px] self-end text-white sm:text-[18px] md:text-[20px] md:leading-6 lg:text-[30px] xl:text-[30px]`}
+          >
             Inspection
           </h2>
         </div>
@@ -130,7 +141,9 @@ const Steps = () => {
             <div className="relative sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] xl:w-[100px] xl:h-[140px]">
               <Image src="/images/3.svg" alt="first step" fill />
             </div>
-            <h2 className="self-end text-white sm:text-[18px] md:text-[20px] md:leading-6 lg:text-[30px] xl:text-[30px]">
+            <h2
+              className={`${inder.variable} font-inder self-end text-white sm:text-[18px] md:text-[20px] md:leading-6 lg:text-[30px] xl:text-[30px]`}
+            >
               Diagnostic
             </h2>
           </div>
@@ -147,7 +160,9 @@ const Steps = () => {
             <div className="relative sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] xl:w-[100px] xl:h-[140px]">
               <Image src="/images/4.svg" alt="first step" fill />
             </div>
-            <h2 className="self-end text-white sm:text-[18px] md:text-[20px] lg:text-[30px]">
+            <h2
+              className={`${inder.variable} font-inder  self-end text-white sm:text-[18px] md:text-[20px] lg:text-[30px]`}
+            >
               Quotation
             </h2>
           </div>
@@ -164,7 +179,9 @@ const Steps = () => {
             <div className="relative sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] xl:w-[100] xl:h-[140px]">
               <Image src="/images/5.svg" alt="first step" fill />
             </div>
-            <h2 className="self-end text-white sm:text-[18px] md:text-[20px] lg:text-[30px]">
+            <h2
+              className={`${inder.variable} font-inder self-end text-white sm:text-[18px] md:text-[20px] lg:text-[30px] `}
+            >
               Approve
             </h2>
           </div>
@@ -181,7 +198,9 @@ const Steps = () => {
             <div className="relative sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] xl:w-[100] xl:h-[140px]">
               <Image src="/images/6.svg" alt="first step" fill />
             </div>
-            <h2 className="self-end sm:text-[18px] md:text-[20px] lg:text-[30px] text-white">
+            <h2
+              className={`${inder.variable} font-inder self-end sm:text-[18px] md:text-[20px] lg:text-[30px] text-white `}
+            >
               Magic
             </h2>
           </div>
@@ -198,7 +217,9 @@ const Steps = () => {
             <div className="relative sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] xl:w-[100] xl:h-[140px]">
               <Image src="/images/7.svg" alt="first step" fill />
             </div>
-            <h2 className="self-end sm:text-[18px] md:text-[20px] lg:text-[30px] text-white">
+            <h2
+              className={`${inder.variable} font-inder self-end sm:text-[18px] md:text-[20px] lg:text-[30px] text-white`}
+            >
               Quality Control
             </h2>
           </div>
@@ -215,7 +236,9 @@ const Steps = () => {
             <div className="relative sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] xl:w-[100] xl:h-[140px]">
               <Image src="/images/8.svg" alt="first step" fill />
             </div>
-            <h2 className="self-end sm:text-[18px] md:text-[20px] lg:text-[30px] text-white">
+            <h2
+              className={`${inder.variable} font-inder self-end sm:text-[18px] md:text-[20px] lg:text-[30px] text-white `}
+            >
               Car Wash
             </h2>
           </div>
@@ -232,7 +255,9 @@ const Steps = () => {
             <div className="relative sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] xl:w-[100] xl:h-[140px]">
               <Image src="/images/9.svg" alt="first step" fill />
             </div>
-            <h2 className="md:ml-[10px] self-end sm:text-[18px] md:text-[20px] lg:text-[30px] text-white">
+            <h2
+              className={`${inder.variable} font-inder md:ml-[10px] self-end sm:text-[18px] md:text-[20px] lg:text-[30px] text-white `}
+            >
               Car drop off
             </h2>
           </div>
@@ -249,7 +274,9 @@ const Steps = () => {
             <div className="relative sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] xl:w-[140px] xl:h-[140px]">
               <Image src="/images/10.svg" alt="first step" fill />
             </div>
-            <h2 className="md:ml-[10px]  self-end sm:text-[18px] md:text-[20px] lg:ml-[10px] xl:ml-[0px] lg:text-[30px] lg:leading-8 text-white">
+            <h2
+              className={`${inder.variable} font-inder md:ml-[10px]  self-end sm:text-[18px] md:text-[20px] lg:ml-[10px] xl:ml-[0px] lg:text-[30px] lg:leading-8 text-white `}
+            >
               Happy client
             </h2>
           </div>
@@ -270,9 +297,9 @@ const Steps = () => {
       {/* className="absolute top-[70px] left-[230px] lg:top-[30px] lg:left-[350px] 2xl:top-[70px] 2xl:left-[420px] " */}
       <motion.div
         style={styles}
-        className="will-change-transform absolute left-[230px] md:left-[40%] lg:left-[40%] xl:left-[42%] z-20"
+        className="will-change-transform absolute left-[230px] md:left-[40%] lg:left-[40%] xl:left-[42%] "
       >
-        <div className="relative sm:w-[60px] sm:h-[60px] md:w-[130px] md:h-[130px] lg:w-[150px] lg:h-[100px] xl:w-[220px] xl:h-[170px] z-20 ">
+        <div className="relative sm:w-[60px] sm:h-[60px] md:w-[130px] md:h-[130px] lg:w-[150px] lg:h-[100px] xl:w-[220px] xl:h-[170px]  ">
           <Image src="/images/car.svg" alt="car" fill />
         </div>
       </motion.div>

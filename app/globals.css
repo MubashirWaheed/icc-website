@@ -9,6 +9,14 @@ body,
   scroll-behavior: smooth;
 }
 
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
 .leaflet-container {
   margin-top: 20px;
   height: 130px;

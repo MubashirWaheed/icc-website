@@ -1,16 +1,14 @@
+import { GoogleTagManager } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Image from "next/image";
-import Link from "next/link";
-// import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import dynamic from "next/dynamic";
-const DynamicFooter = dynamic(() => import("@/components/Footer"), {
+const DynamicFooter = dynamic(() => import("@/app/components/Footer/Footer"), {
   loading: () => <p>Loading...</p>,
 });
 
 const inter = Inter({ subsets: ["latin"] });
+const gtmid = process.env.NEXT_PUBLIC_GTMID;
 
 export const metadata = {
   title: "Icc Garage",
@@ -18,10 +16,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const undercontruction = true;
+  const undercontruction = false;
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         {undercontruction ? (
           <div className="flex items-center justify-center h-full">
             <h1 className="text-[28px] mt-[10px] font-medium">
@@ -29,12 +27,12 @@ export default function RootLayout({ children }) {
             </h1>
           </div>
         ) : (
-          <Header />
+          <div></div>
         )}
         {children}
-        {/* <Footer /> */}
-        {/* <DynamicFooter /> */}
-        {/* <Analytics /> */}
+        <DynamicFooter />
+        <Analytics />
+        <GoogleTagManager gtmId={gtmid} />
       </body>
     </html>
   );

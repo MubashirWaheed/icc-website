@@ -1,8 +1,10 @@
-import Repair from "@/components/Repair";
-import Services from "@/components/Services";
+import Repair from "./components/Repair/Repair";
+import Services from "./components/Services/Services";
 import Image from "next/image";
-import Hero from "@/components/Hero";
+import Hero from "./components/Hero/Hero";
 import Link from "next/link";
+import Contact from "./components/Contact/Contact";
+import Stats from "./components/Stats/Stats";
 
 export const metadata = {
   title: "ICC Gargage",
@@ -10,7 +12,7 @@ export const metadata = {
 };
 
 export default function Home() {
-  const undercontruction = true;
+  const undercontruction = false;
   return (
     <div>
       {undercontruction === true ? (
@@ -19,13 +21,14 @@ export default function Home() {
         <div className="flex bg-[#2f2f2f] justify-center">
           <div className="max-w-[1900px] w-full relative overflow-y-auto  flex flex-col items-center justify-center">
             <Hero />
+            <Stats />
             <Services />
+            <Contact />
+
             <Repair />
             <Link
               target="_blank"
               href="https://api.whatsapp.com/send/?phone=%2B971523383358&text&type=phone_number&app_absent=0"
-              // href="//api.whatsapp.com/send?phone=91MOBILE_NUMBER&text=WHATEVER_LINK_OR_TEXT_YOU_WANT_TO_SEND"
-              // href="https://api.whatsapp.com/"
               className=" fixed z-50 left-[30px] bottom-[30px] hover:scale-105 transition-all  cursor-pointer bg-primaryGreen rounded-full"
             >
               <div className="relative w-[60px] h-[60px]">

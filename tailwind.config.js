@@ -13,6 +13,10 @@ module.exports = {
         accentGreen: "#a5bc00",
       },
       display: ["group-hover"],
+      fontFamily: {
+        inder: ["var(--font-inder)"],
+        julius: ["var(--font-julius)"],
+      },
     },
   },
   plugins: [],

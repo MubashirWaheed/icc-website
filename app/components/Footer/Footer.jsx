@@ -2,26 +2,40 @@
 import styles from "@/styles/footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
-// import GoogleMap from "./GoogleMap";
-import dynamic from "next/dynamic";
-const GoogleMap = dynamic(() => import("./GoogleMap"), { ssr: false });
+
 const Footer = () => {
   return (
     <>
-      <footer className={styles.footer}>
-        <div className="w-[4400px] text-white flex gap-6">
-          <span className="whitespace-nowrap uppercase  text-white w-full font-medium text-[22px] xl:text-[26px]">
-            WE MAKE YOUR CAR FEEL LIKE NEW
-          </span>
+      <footer>
+        <div className={styles.tickerTapeContainer}>
+          <div className={styles.tickerTape}>
+            <span className="whitespace-nowrap uppercase text-white font-medium text-[22px] xl:text-[26px]">
+              WE MAKE YOUR CAR FEEL LIKE NEW
+            </span>
 
-          <span className="whitespace-nowrap uppercase inline-block w-full text-[22px] xl:text-[26px]">
-            WE MAKE YOUR CAR FEEL LIKE NEW
-          </span>
-          <span className="whitespace-nowrap inline-block w-full text-[22px] xl:text-[26px] uppercase">
-            WE MAKE YOUR CAR FEEL LIKE NEW
-          </span>
+            <span className="whitespace-nowrap uppercase  text-[22px] xl:text-[26px] font-medium">
+              WE MAKE YOUR CAR FEEL LIKE NEW
+            </span>
+            <span className="text-white whitespace-nowrap text-[22px] xl:text-[26px] uppercase  font-medium">
+              WE MAKE YOUR CAR FEEL LIKE NEW
+            </span>
+          </div>
+
+          <div className={styles.tickerTape} aria-hidden="true">
+            <span className=" whitespace-nowrap uppercase text-white font-medium text-[22px] xl:text-[26px]">
+              WE MAKE YOUR CAR FEEL LIKE NEW
+            </span>
+
+            <span className="whitespace-nowrap uppercase   text-[22px] xl:text-[26px] font-medium">
+              WE MAKE YOUR CAR FEEL LIKE NEW
+            </span>
+            <span className="whitespace-nowrap  text-[22px] xl:text-[26px] uppercase font-medium">
+              WE MAKE YOUR CAR FEEL LIKE NEW
+            </span>
+          </div>
         </div>
       </footer>
+
       <div className="bg-[#575e21] flex items-center justify-center">
         <div className="max-w-[1800px] sm:px-[20px] sm:py-[10px] xl:pl-[50px] flex  text-white   ">
           <div className="flex-1 flex flex-col">
@@ -29,17 +43,19 @@ const Footer = () => {
               Follow Us:
             </h4>
             <div className="">
-              <div className="flex">
-                <div className="relative gap-2 xl:w-[30px] xl:h-[30px]">
+              {/* <div className="flex">
+                <div className="relative gap-2 w-[20px] h-[20px] xl:w-[30px] xl:h-[30px] ml-[10px]">
                   <Image
                     src="/images/whatsapp-transparent.svg"
                     fill
                     alt="whatsapp logo"
                   />
                 </div>
-                <p className="xl:text-[20px]">+971523383358</p>
-              </div>
-              <div className="flex">
+                <p className="text-[14px] xl:text-[20px] ml-[10px]">
+                  +971523383358
+                </p>
+              </div> */}
+              {/* <div className="flex">
                 <div className="relative gap-2 xl:w-[30px] xl:h-[30px]">
                   <Image
                     src="/images/whatsapp-transparent.svg"
@@ -48,32 +64,53 @@ const Footer = () => {
                   />
                 </div>
                 <p className="xl:text-[20px]">info@iccgarage.com</p>
-              </div>
+              </div> */}
               <ul>
-                <li className="flex gap-2 xl:text-[20px] cursor-pointer">
-                  <div className="relative xl:w-[30px] xl:h-[30px]">
-                    <Image
-                      src="/images/whatsapp-transparent.svg"
-                      fill
-                      alt="whatsapp logo"
-                    />
-                  </div>
-                  <Link href="https://www.instagram.com/icc_garage_uae/">
+                <li className="flex items-center gap-2 xl:text-[20px] cursor-pointer">
+                  <Link
+                    target="_blank"
+                    className="flex gap-3 items-center"
+                    href="https://api.whatsapp.com/send/?phone=%2B971523383358&text&type=phone_number&app_absent=0"
+                  >
+                    <div className="relative  w-[28px] h-[26px] xl:w-[38px] xl:h-[50px]">
+                      <Image
+                        src="/images/whatsapp-transparent.svg"
+                        fill
+                        alt="whatsapp logo"
+                      />
+                    </div>
+                    +971523383358
+                  </Link>
+                </li>
+                <li className="flex items-center gap-2 xl:text-[20px] cursor-pointer">
+                  <Link
+                    target="_blank"
+                    className="flex gap-3 items-center"
+                    href="https://www.instagram.com/icc_garage_uae/"
+                  >
+                    <div className="relative  w-[28px] h-[26px] xl:w-[55px] xl:h-[60px] ml-[-10px]">
+                      <Image
+                        src="/images/instagramIcon.svg"
+                        fill
+                        alt="Instagram icon"
+                      />
+                    </div>
                     Icc_garage_uae
                   </Link>
                 </li>
                 <li className="flex gap-2 xl:text-[20px] cursor-pointer">
-                  <div className="relative w-[20px] h-[20px]  xl:w-[30px] xl:h-[30px]">
-                    <Image
-                      src="/images/whatsapp-transparent.svg"
-                      fill
-                      alt="whatsapp"
-                    />
-                  </div>
                   <Link
+                    className="flex gap-3 items-center"
                     target="_blank"
                     href="https://www.facebook.com/ICCGarage/"
                   >
+                    <div className="relative w-[20px] h-[20px]  xl:w-[40px] xl:h-[40px] ml-[-5px]">
+                      <Image
+                        src="/images/facebook.svg"
+                        fill
+                        alt="facebook logo"
+                      />
+                    </div>
                     facebook
                   </Link>
                 </li>
@@ -118,9 +155,6 @@ const Footer = () => {
                 />
               </div>
             </Link>
-            {/* <div className=" lg:w-[200px] sm:h-[80px] xl:w-[220px] ">
-              <GoogleMap />
-            </div> */}
           </div>
         </div>
       </div>
