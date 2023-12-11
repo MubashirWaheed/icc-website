@@ -29,8 +29,8 @@
 .tickerTapeContainer {
   overflow-x: hidden;
   display: flex;
-
-  /* gap: 0; */
+  width: 100%;
+  /* gap: 30px; */
   background-color: #575e21;
 }
 
@@ -38,27 +38,10 @@
   color: white;
   display: flex;
   align-items: center;
+  padding-right: 40px;
   min-width: 100%;
   flex: 0 0 auto;
   gap: 45px;
-  animation-name: marquee;
-  animation-duration: 60s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-play-state: running;
-  animation-direction: normal;
-}
-
-.tickerTape1 {
-  margin: 0; /* Reset margin */
-  padding: 0;
-  background-color: blue;
-  color: white;
-  display: flex;
-  align-items: center;
-  flex: 0 0 auto;
-  gap: 35px;
   animation-name: marquee;
   animation-duration: 60s;
   animation-timing-function: linear;
