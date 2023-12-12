@@ -98,9 +98,9 @@ const Footer = () => {
                     Icc_garage_uae
                   </Link>
                 </li>
-                <li className="flex gap-2 xl:text-[20px] cursor-pointer">
+                <li className="flex  xl:text-[20px] cursor-pointer">
                   <Link
-                    className="flex gap-3 items-center"
+                    className="flex gap-5 items-center"
                     target="_blank"
                     href="https://www.facebook.com/ICCGarage/"
                   >

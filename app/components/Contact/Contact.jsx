@@ -5,8 +5,8 @@ import ContactForm from "./components/ContactForm";
 const Contact = () => {
   return (
     <div className="z-50 relative group transition-all ease-out duration-300 rounded-2xl">
-      <div className="sm:px-[18px] lg:px-[30px]  py-[10px] lg:py-[20px] hover:scale-[1.01] hover:shadow-gray-500 hover:shadow-md shadow-sm transition-all duration-300  cursor-pointer rounded-3xl border-black border-[1px] bg-[#606727] flex items-center">
-        <div className="rounded-full bg-[#a5bc00] relative w-[40px] h-[40px] xl:w-[60px] xl:h-[60px]">
+      <div className="gap-5 sm:px-[18px] lg:px-[30px] py-[10px] lg:py-[10px] hover:scale-[1.01] hover:shadow-gray-500 hover:shadow-md shadow-sm transition-all duration-300  cursor-pointer rounded-3xl border-black border-[1px] bg-[#606727] flex items-center">
+        <div className="rounded-full bg-[#c9dd34] relative w-[40px] h-[40px] xl:w-[60px] xl:h-[60px]">
           <Image src="/images/right-arrow.svg" fill alt="right arrow" />
         </div>
         <p className="sm:px-[18px] lg:text-[24px] xl:text-[28px] font-normal xl:font-medium text-[#a5bc00] uppercase leading-8">

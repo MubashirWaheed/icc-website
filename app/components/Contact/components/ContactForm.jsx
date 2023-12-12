@@ -121,7 +121,7 @@ const ContactForm = () => {
       ) : null}
       <div className="w-full flex items-center justify-center">
         <button
-          className="w-full py-[10px] rounded-lg mt-[10px] bg-accentGreen font-semibold  text-[20px] lg:text-[23px]"
+          className="w-full py-[10px] rounded-lg mt-[10px] bg-accentGreen font-medium  text-[20px] lg:text-[23px]"
           type="submit"
         >
           Send email
