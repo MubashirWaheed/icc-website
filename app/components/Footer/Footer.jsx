@@ -88,7 +88,7 @@ const Footer = () => {
                     className="flex gap-3 items-center"
                     href="https://www.instagram.com/icc_garage_uae/"
                   >
-                    <div className="relative  w-[28px] h-[26px] xl:w-[55px] xl:h-[60px] ml-[-10px]">
+                    <div className="relative  w-[28px] h-[26px] lg:w-[40px] lg:h-[40px] ">
                       <Image
                         src="/images/instagramIcon.svg"
                         fill
@@ -98,13 +98,13 @@ const Footer = () => {
                     Icc_garage_uae
                   </Link>
                 </li>
-                <li className="flex  xl:text-[20px] cursor-pointer">
+                <li className="flex  xl:text-[20px] cursor-pointer lg:mt-[5px]">
                   <Link
                     className="flex gap-5 items-center"
                     target="_blank"
                     href="https://www.facebook.com/ICCGarage/"
                   >
-                    <div className="relative w-[20px] h-[20px]  xl:w-[40px] xl:h-[40px] ml-[-5px]">
+                    <div className="relative w-[20px] h-[20px]  xl:w-[40px] xl:h-[40px] ml-[-2px]">
                       <Image
                         src="/images/facebook.svg"
                         fill

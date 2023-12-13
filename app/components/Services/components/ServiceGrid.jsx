@@ -64,7 +64,7 @@ const servicesRow3 = [
 
 const ServiceGrid = () => {
   return (
-    <div className="py-[20px] relative z-20  px-[10px] max-w-[1280px] flex flex-col items-center justify-between gap-6 xl:gap-7 ">
+    <div className="max-w-[1350px] py-[20px] relative z-20  px-[10px] lg:px-[0px]  flex flex-col items-center justify-between gap-6 xl:gap-7 ">
       {/* ROW */}
       <div className="flex flex-col gap-4 sm:flex-row ">
         {servicesRow1.map((item, index) => (
