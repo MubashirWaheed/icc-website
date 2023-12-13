@@ -50,7 +50,7 @@ const Services = () => {
       <h2
         className={`${inder.variable} font-inder sm:py-[26px] md:py-[40px] lg:py-[55px] md:text-[55px]  text-center text-white  text-[32px] leading-3 `}
       >
-        Our services include:
+        Our Services
       </h2>
       <ServiceGrid />
 

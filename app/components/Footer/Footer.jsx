@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <>
-      <footer>
+    <section id="footer">
+      <footer className="flex items-center justify-center bg-[#575e21]">
         <div className={styles.tickerTapeContainer}>
           <div className={styles.tickerTape}>
             <span className="whitespace-nowrap uppercase text-white font-medium text-[22px] xl:text-[26px]">
@@ -158,7 +158,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

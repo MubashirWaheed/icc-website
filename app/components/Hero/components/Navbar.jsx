@@ -7,7 +7,7 @@ import { Inter } from "next/font/google";
 const navigationData = [
   { id: 1, label: "Home", url: "#" },
   { id: 2, label: "Services", url: "/#services" },
-  { id: 3, label: "Contact", url: "#" },
+  { id: 3, label: "Contact", url: "#footer" },
 ];
 const inter = Inter({
   subsets: ["latin"],

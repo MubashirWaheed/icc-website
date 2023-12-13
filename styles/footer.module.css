@@ -30,7 +30,7 @@
   overflow-x: hidden;
   display: flex;
   width: 100%;
-  /* gap: 30px; */
+  max-width: 1500px;
   background-color: #575e21;
 }
 
@@ -39,7 +39,6 @@
   display: flex;
   align-items: center;
   padding-right: 40px;
-  min-width: 100%;
   flex: 0 0 auto;
   gap: 45px;
   animation-name: marquee;
