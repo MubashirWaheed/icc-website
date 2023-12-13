@@ -1,8 +1,9 @@
+import Image from "next/image";
+import Link from "next/link";
+
 import Repair from "./components/Repair/Repair";
 import Services from "./components/Services/Services";
-import Image from "next/image";
 import Hero from "./components/Hero/Hero";
-import Link from "next/link";
 import Contact from "./components/Contact/Contact";
 import Stats from "./components/Stats/Stats";
 

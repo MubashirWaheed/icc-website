@@ -11,13 +11,7 @@ const Hero = () => {
         <div className="z-10 bg-black/60  flex items-center justify-center absolute top-0 right-0 left-0 ">
           <Navbar />
         </div>
-        <Image
-          className=""
-          priority={true}
-          src="/images/newhero.png"
-          alt="hero"
-          fill
-        />
+        <Image priority={true} src="/images/newhero.png" alt="hero" fill />
       </div>
 
       <div className="block sm:hidden">
