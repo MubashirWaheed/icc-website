@@ -16,6 +16,7 @@ module.exports = {
       fontFamily: {
         inder: ["var(--font-inder)"],
         julius: ["var(--font-julius)"],
+        inter: ["var(--font-inter)"],
       },
     },
   },

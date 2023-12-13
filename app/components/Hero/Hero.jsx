@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div className="relative w-full h-[calc(100vh-70px)] sm:h-[100vh]">
       <div className=" hidden sm:block">
-        <div className="z-10 bg-black/75  flex items-center justify-center absolute top-0 right-0 left-0 ">
+        <div className="z-10 bg-black/60  flex items-center justify-center absolute top-0 right-0 left-0 ">
           <Navbar />
         </div>
         <Image
