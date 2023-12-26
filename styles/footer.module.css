@@ -5,25 +5,6 @@
   background-color: #575e21;
   position: relative;
 }
-.footer > div {
-  animation: advertising infinite linear 20s;
-}
-
-@media screen and (max-width: 600px) {
-  /* Styles for screens with a maximum width of 600px */
-  .footer > div {
-    animation: advertising infinite linear 20s;
-  }
-}
-@keyframes advertising {
-  0% {
-    transform: translateX(-100%);
-  }
-
-  100% {
-    transform: translateX(100%);
-  }
-}
 
 /* NEW */
 .tickerTapeContainer {

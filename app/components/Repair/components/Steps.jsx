@@ -91,9 +91,9 @@ const Steps = () => {
     translateY: test,
   };
 
-  useEffect(() => {
-    scrollYProgress.onChange((value) => console.log(value));
-  });
+  // useEffect(() => {
+  //   scrollYProgress.onChange((value) => console.log(value));
+  // });
   return (
     <div
       ref={targetRef}

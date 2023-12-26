@@ -1,8 +1,9 @@
+import dynamic from "next/dynamic";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import dynamic from "next/dynamic";
+
 const DynamicFooter = dynamic(() => import("@/app/components/Footer/Footer"), {
   loading: () => <p>Loading...</p>,
 });

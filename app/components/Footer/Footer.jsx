@@ -1,4 +1,4 @@
-"use client ";
+"use client";
 import styles from "@/styles/footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,7 +6,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <section id="footer">
-      <footer className="flex items-center justify-center bg-[#575e21]">
+      <footer className="hidden sm:flex  items-center justify-center bg-[#575e21]">
         <div className={styles.tickerTapeContainer}>
           <div className={styles.tickerTape}>
             <span className="whitespace-nowrap uppercase text-white font-medium text-[22px] xl:text-[26px]">
@@ -43,28 +43,6 @@ const Footer = () => {
               Follow Us:
             </h4>
             <div className="">
-              {/* <div className="flex">
-                <div className="relative gap-2 w-[20px] h-[20px] xl:w-[30px] xl:h-[30px] ml-[10px]">
-                  <Image
-                    src="/images/whatsapp-transparent.svg"
-                    fill
-                    alt="whatsapp logo"
-                  />
-                </div>
-                <p className="text-[14px] xl:text-[20px] ml-[10px]">
-                  +971523383358
-                </p>
-              </div> */}
-              {/* <div className="flex">
-                <div className="relative gap-2 xl:w-[30px] xl:h-[30px]">
-                  <Image
-                    src="/images/whatsapp-transparent.svg"
-                    fill
-                    alt="whatsapp logo"
-                  />
-                </div>
-                <p className="xl:text-[20px]">info@iccgarage.com</p>
-              </div> */}
               <ul>
                 <li className="flex items-center gap-2 xl:text-[20px] cursor-pointer">
                   <Link
@@ -144,7 +122,7 @@ const Footer = () => {
               target="_blank"
               href="https://www.google.com/maps/place/ICC+-+Intensive+Car+Care/@25.1223887,55.2208276,17z/data=!4m6!3m5!1s0x3e5f6bdb00000001:0xe5da10f8148c0701!8m2!3d25.1223887!4d55.2208276!16s%2Fg%2F11bccj809j?entry=ttu"
             >
-              <div className="relative sm:w-[150px] sm:h-[140px] md:w-[] lg:w-[220px] lg:h-[170px] xl:w-[280px] xl:h-[230px]">
+              <div className="relative sm:w-[150px] sm:h-[140px] md:w-[180px] md:h-[200px] lg:w-[220px] lg:h-[170px] xl:w-[280px] xl:h-[230px]">
                 <Image
                   className="cursor-pointer py-[20px]"
                   // width="300"

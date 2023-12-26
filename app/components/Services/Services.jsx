@@ -25,7 +25,6 @@ const Services = () => {
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log("entry", entry.isIntersecting); // Log the intersection state
         if (entry.isIntersecting) {
           setIsVisible(true);
           observer.unobserve(entry.target); // Stop observing once animation has occurred
