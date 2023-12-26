@@ -63,7 +63,7 @@ const accordionItems = [
 
 const MobileServices = () => {
   return (
-    <div className="mb-[30px] flex- flex-col items-center justify-center sm:hidden  w-full px-[40px] text-white">
+    <div className="mb-[40px] flex- flex-col items-center justify-center sm:hidden  w-full px-[40px] text-white">
       <div className={`${inder.variable} text-center  font-inder text-[50px]`}>
         Our Services
       </div>

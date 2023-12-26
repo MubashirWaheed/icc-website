@@ -30,11 +30,11 @@ export default function Home() {
           {/* <div className="block sm:hidden"> */}
           <MobileServices />
           {/* </div> */}
-          <div className="hidden sm:flex w-full">
+          <div className="hidden sm:flex w-full items-center justify-center">
             <Services />
           </div>
           <Contact />
-          <div className="hidden sm:flex w-full">
+          <div className="hidden sm:flex w-full justify-center">
             <Repair />
           </div>
 

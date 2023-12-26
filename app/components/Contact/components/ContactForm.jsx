@@ -62,10 +62,10 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleEmaileSend}
-      className="sm:px-[10px] flex flex-col w-full"
+      className="px-[15px] sm:px-[10px] flex flex-col w-full"
     >
       <input
-        className={`text-white my-[5px] sm:px-[10px] sm:py-[5px] lg:py-[10px] lg:text-[20px] placeholder:text-[16px] focus:outline-black focus:border-none  placeholder-white sm:rounded-md  border-b-[1px] border-white bg-[#606727] ${
+        className={` text-white my-[5px] py-[5px] sm:px-[10px] sm:py-[5px] lg:py-[10px] lg:text-[20px] placeholder:text-[16px] focus:outline-black focus:border-none  placeholder-white sm:rounded-md  border-b-[1px] border-white bg-[#606727] ${
           isNameValid ? "" : "border-red-500" // Highlight red if invalid
         }`}
         name="name"
@@ -78,7 +78,7 @@ const ContactForm = () => {
         }}
       />
       <input
-        className={`lg:py-[10px] lg:text-[20px] my-[5px] sm:px-[10px] sm:py-[5px] placeholder:text-[16px] text-white focus:outline-black focus:border-none  placeholder-white sm:rounded-md  border-b-[1px] border-white bg-[#606727] ${
+        className={`py-[5px] lg:py-[10px] lg:text-[20px] my-[5px] sm:px-[10px] sm:py-[5px] placeholder:text-[16px] text-white focus:outline-black focus:border-none  placeholder-white sm:rounded-md  border-b-[1px] border-white bg-[#606727] ${
           isPhoneValid ? "" : "border-red-500" // Highlight red if invalid
         }`}
         name="phone"
@@ -91,7 +91,7 @@ const ContactForm = () => {
         }}
       />
       <input
-        className={`lg:py-[10px] lg:text-[20px] my-[5px] sm:px-[10px] sm:py-[5px] placeholder:text-[16px] text-white focus:outline-black focus:border-none  placeholder-white sm:rounded-md  border-b-[1px] border-white bg-[#606727] ${
+        className={` py-[5px] lg:py-[10px] lg:text-[20px] my-[5px] sm:px-[10px] sm:py-[5px] placeholder:text-[16px] text-white focus:outline-black focus:border-none  placeholder-white sm:rounded-md  border-b-[1px] border-white bg-[#606727] ${
           isModelValid ? "" : "border-red-500" // Highlight red if invalid
         }`}
         name="model"
@@ -104,7 +104,7 @@ const ContactForm = () => {
         }}
       />
       <input
-        className={`lg:py-[10px] lg:text-[20px] focus:outline-black text-white  placeholder:text-[16px] focus:border-none my-[5px] sm:px-[10px] sm:py-[5px] placeholder-white sm:rounded-md  border-b-[1px] border-white bg-[#606727] ${
+        className={`py-[5px] lg:py-[10px] lg:text-[20px] focus:outline-black text-white  placeholder:text-[16px] focus:border-none my-[5px] sm:px-[10px] sm:py-[5px] placeholder-white sm:rounded-md  border-b-[1px] border-white bg-[#606727] ${
           isCommentValid ? "" : "border-red-500" // Highlight red if invalid
         }`}
         name="comment"
@@ -132,7 +132,7 @@ const ContactForm = () => {
           href="https://api.whatsapp.com/send/?phone=%2B971523383358&text&type=phone_number&app_absent=0"
           className="flex    px-[10px]"
         >
-          <div className=" relative sm:w-[35px] sm:h-[35px] lg:w-[45px] lg:h-[45px] cursor-pointer bg-accentGreen rounded-full p-[10px]">
+          <div className=" relative w-[45px] h-[45px] sm:w-[35px] sm:h-[35px] lg:w-[45px] lg:h-[45px] cursor-pointer bg-accentGreen rounded-full p-[10px]">
             <Image
               src="/images/whatsapp-transparent.svg"
               fill

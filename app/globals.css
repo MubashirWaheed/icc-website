@@ -8,6 +8,9 @@ body,
   height: 100%;
   scroll-behavior: smooth;
 }
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 
 @layer base {
   input[type="number"]::-webkit-inner-spin-button,

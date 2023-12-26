@@ -3,10 +3,12 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
-const DynamicFooter = dynamic(() => import("@/app/components/Footer/Footer"), {
-  loading: () => <p>Loading...</p>,
-});
+import MobileFooter from "./components/Footer/components/MobileFooter";
+// import("@/app/components/Footer/Footer")
+import Footer from "./components/Footer/Footer";
+// const DynamicFooter = dynamic(() => import("@/app/components/Footer/Footer"), {
+//   loading: () => <p>Loading...</p>,
+// });
 
 const inter = Inter({ subsets: ["latin"] });
 const gtmid = process.env.NEXT_PUBLIC_GTMID;
@@ -31,7 +33,11 @@ export default function RootLayout({ children }) {
           <div></div>
         )}
         {children}
-        <DynamicFooter />
+        <MobileFooter />
+        <div className="hidden sm:block">
+          <Footer />
+        </div>
+        {/* <DynamicFooter /> */}
         <Analytics />
         <GoogleTagManager gtmId={gtmid} />
       </body>
